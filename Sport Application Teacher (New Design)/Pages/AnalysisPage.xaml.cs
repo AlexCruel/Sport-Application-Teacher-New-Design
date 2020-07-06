@@ -34,6 +34,12 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             //MessageBox.Show(nameText);
         }
 
+        public AnalysisPage(Frame frame)
+        {
+            InitializeComponent();
+            testFrame = frame;
+        }
+
         private void facultyBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Specialty spec = new Specialty(specBox, facultyBox);
@@ -48,7 +54,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
 
         private void ButtonShowHours(object sender, RoutedEventArgs e)
         {
-            testFrame.Content = new ReportSumHours(groupBox);
+            testFrame.Content = new ReportSumHours(groupBox, testFrame);
         }
     }
 }

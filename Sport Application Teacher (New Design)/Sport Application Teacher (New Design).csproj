@@ -96,6 +96,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ReportStudHours.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ReportSumHours.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +108,9 @@
   <ItemGroup>
     <Compile Include="Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReportStudHours.xaml.cs">
+      <DependentUpon>ReportStudHours.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ReportSumHours.xaml.cs">
       <DependentUpon>ReportSumHours.xaml</DependentUpon>

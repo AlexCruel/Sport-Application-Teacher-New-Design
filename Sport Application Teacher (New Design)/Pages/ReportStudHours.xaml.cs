@@ -16,31 +16,25 @@ using System.Windows.Shapes;
 namespace Sport_Application_Teacher__New_Design_.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ReportSumHours.xaml
+    /// Логика взаимодействия для ReportStudHours.xaml
     /// </summary>
-    public partial class ReportSumHours : Page
+    public partial class ReportStudHours : Page
     {
-        ComboBox groupBox = new ComboBox();
         Frame testFrame = new Frame();
         Teacher teacher = new Teacher();
+        ComboBox groupBox = new ComboBox();
 
-        public ReportSumHours(ComboBox group, Frame frame)
+        public ReportStudHours(string name, ComboBox group, Frame frame)
         {
             InitializeComponent();
-            groupBox = group;
             testFrame = frame;
-            teacher.connectStudHours(groupBox, studHoursGrid);
+            groupBox = group;
+            teacher.connectStud(studHoursGrid, name);
         }
 
         private void ButtonBack(object sender, RoutedEventArgs e)
         {
-            testFrame.Content = new AnalysisPage(testFrame);
-        }
-
-        private void ButtonNext(object sender, RoutedEventArgs e)
-        {
-            string studName = teacher.getStudName(studHoursGrid);
-            testFrame.Content = new ReportStudHours(studName, groupBox, testFrame);
+            testFrame.Content = new ReportSumHours(groupBox, testFrame);
         }
     }
 }

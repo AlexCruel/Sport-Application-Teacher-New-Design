@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sport_Application_Teacher__New_Design_.Pages;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -65,7 +66,6 @@ namespace Sport_Application_Teacher__New_Design_
             {
                 connect($"SELECT [ФИО Студента], [Всего отработано часов] FROM [Sum_HoursFull] WHERE [Группа] = '17ИТ-1'", "Hours");
                 studHours.ItemsSource = dst.Tables["Hours"].DefaultView;
-                studHours.FontSize = 22;
             }
             catch (SqlException ex)
             {
@@ -74,20 +74,24 @@ namespace Sport_Application_Teacher__New_Design_
 
         }
 
-        //public void connectGroup(string value, ListBox groupBox)
-        //{
-        //    try
-        //    {
-        //        connect("SELECT * FROM [Группы] WHERE [КодПрепод] = " + value, "Group");
-        //        groupBox.DataSource = dst.Tables["Group"];
-        //        groupBox.ValueMember = dst.Tables["Group"].Columns[0].ColumnName;
-        //        groupBox.DisplayMember = dst.Tables["Group"].Columns[2].ColumnName;
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
+        public string getStudName(DataGrid studHours)
+        {
+            TextBlock value = (TextBlock)studHours.Columns[0].GetCellContent(studHours.SelectedItem);
 
-        //}
+            return value.Text;
+        }
+
+        public void connectStud(DataGrid studHours, string studName)
+        {
+            try
+            {
+                connect($"SELECT [Дата], [УчебПрограмма], [ОтрабЧасы] FROM [ListJournal] WHERE [ФИО_Студ] = '{studName}'", "Student");
+                studHours.ItemsSource = dst.Tables["Student"].DefaultView;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
