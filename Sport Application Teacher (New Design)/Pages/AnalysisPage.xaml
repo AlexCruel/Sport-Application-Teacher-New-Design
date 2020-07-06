@@ -1,0 +1,28 @@
+﻿<Page x:Class="Sport_Application_Teacher__New_Design_.Pages.AnalysisPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AnalysisPage">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <Grid HorizontalAlignment="Center" Margin="10">
+                <TextBlock Text="Факультет" FontSize="15" Foreground="Black"/>
+                <ComboBox x:Name="facultyBox" Width="400" Margin="0 20" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="facultyBox_SelectionChanged"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Margin="10">
+                <TextBlock Text="Специальность" FontSize="15" Foreground="Black"/>
+                <ComboBox x:Name="specBox" Width="400" Margin="0 20" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="specBox_SelectionChanged"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center" Margin="10">
+                <TextBlock Text="Группа" FontSize="15" Foreground="Black"/>
+                <ComboBox x:Name="groupBox" Width="400" Margin="0 20" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </Grid>
+            <Button Content="Показать" Width="95" Height="35" Margin="30"/>
+        </StackPanel>
+    </Grid>
+</Page>
