@@ -59,6 +59,21 @@ namespace Sport_Application_Teacher__New_Design_
 
         }
 
+        public void connectStudHours(ComboBox value, DataGrid studHours)
+        {
+            try
+            {
+                connect($"SELECT [ФИО Студента], [Всего отработано часов] FROM [Sum_HoursFull] WHERE [Группа] = '17ИТ-1'", "Hours");
+                studHours.ItemsSource = dst.Tables["Hours"].DefaultView;
+                studHours.FontSize = 22;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
         //public void connectGroup(string value, ListBox groupBox)
         //{
         //    try
@@ -67,23 +82,6 @@ namespace Sport_Application_Teacher__New_Design_
         //        groupBox.DataSource = dst.Tables["Group"];
         //        groupBox.ValueMember = dst.Tables["Group"].Columns[0].ColumnName;
         //        groupBox.DisplayMember = dst.Tables["Group"].Columns[2].ColumnName;
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-
-        //}
-
-        //public void connectStudHours(string value, DataGridView studHours)
-        //{
-        //    try
-        //    {
-        //        connect($"SELECT [ФИО_Студ], [ВсегоОтрабЧасов] FROM [Sum_HoursFull] WHERE [Группа] = '{value}'", "Hours");
-        //        studHours.DataSource = dst.Tables["Hours"];
-        //        studHours.Columns[0].HeaderText = "ФИО студента";
-        //        studHours.Columns[1].HeaderText = "Всего отработано часов";
-        //        studHours.Font = new Font("Microsoft Sans Serif", 16f, GraphicsUnit.Pixel);
         //    }
         //    catch (SqlException ex)
         //    {

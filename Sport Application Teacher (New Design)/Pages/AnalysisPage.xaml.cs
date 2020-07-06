@@ -21,11 +21,13 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     /// </summary>
     public partial class AnalysisPage : Page
     {
+        Frame testFrame = new Frame();
         string nameText;
 
-        public AnalysisPage(TextBlock text)
+        public AnalysisPage(TextBlock text, Frame frame)
         {
             InitializeComponent();
+            testFrame = frame;
             nameText = text.Text;
             Faculty faculty = new Faculty(facultyBox);
             faculty.connectFaculty();
@@ -42,6 +44,11 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         {
             Group group = new Group(groupBox, specBox);
             group.connectGroup();
+        }
+
+        private void ButtonShowHours(object sender, RoutedEventArgs e)
+        {
+            testFrame.Content = new ReportSumHours(groupBox);
         }
     }
 }
