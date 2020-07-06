@@ -38,13 +38,13 @@ namespace Sport_Application_Teacher__New_Design_
         private void ButtonEnter(object sender, RoutedEventArgs e)
         {
             int index = loginBox.SelectedIndex;
-            string value = teacher.Dst.Tables["Teacher"].Rows[index][0].ToString();
+            string value = teacher.Dst.Tables["Teacher"].Rows[index][2].ToString();
 
             if (passwordBox.Text == value)
             {
                 GridLogin.Visibility = Visibility.Hidden;
                 nameText.Text = loginBox.Text;
-                nameNumber.Text = teacher.Dst.Tables["Teacher"].Rows[index][2].ToString();
+                nameNumber.Text = teacher.Dst.Tables["Teacher"].Rows[index][0].ToString();
                 frame.Content = new HomePage();
                 teacher.Dst.Clear();
             }

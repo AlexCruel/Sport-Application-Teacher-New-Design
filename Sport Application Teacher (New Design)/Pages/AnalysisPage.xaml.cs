@@ -22,16 +22,15 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     public partial class AnalysisPage : Page
     {
         Frame testFrame = new Frame();
-        string nameText;
+        TextBlock nameNumber = new TextBlock();
 
-        public AnalysisPage(TextBlock text, Frame frame)
+        public AnalysisPage(Frame frame, TextBlock name)
         {
             InitializeComponent();
             testFrame = frame;
-            nameText = text.Text;
+            nameNumber = name;
             Faculty faculty = new Faculty(facultyBox);
             faculty.connectFaculty();
-            //MessageBox.Show(nameText);
         }
 
         public AnalysisPage(Frame frame)
@@ -49,7 +48,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         private void specBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Group group = new Group(groupBox, specBox);
-            group.connectGroup();
+            group.connectGroup(nameNumber);
         }
 
         private void ButtonShowHours(object sender, RoutedEventArgs e)

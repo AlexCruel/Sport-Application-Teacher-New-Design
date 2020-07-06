@@ -39,11 +39,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectGroup()
+        public void connectGroup(TextBlock nameNumber)
         {
             try
             {
-                connect("SELECT * FROM [Группы] WHERE [КодСпец] = " + specBox.SelectedValue, "Group");
+                connect($"SELECT * FROM [Группы] WHERE [КодСпец] = {specBox.SelectedValue} AND [НомерПрепод] = '{nameNumber.Text}'", "Group");
                 groupBox.ItemsSource = dst.Tables["Group"].DefaultView;
                 groupBox.SelectedValuePath = dst.Tables["Group"].Columns[0].ToString();
                 groupBox.DisplayMemberPath = dst.Tables["Group"].Columns[2].ToString();

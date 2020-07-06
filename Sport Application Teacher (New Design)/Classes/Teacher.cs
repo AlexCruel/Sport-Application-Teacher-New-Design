@@ -50,7 +50,7 @@ namespace Sport_Application_Teacher__New_Design_
             {
                 connect("SELECT * FROM [Преподаватели]", "Teacher");
                 teacherBox.ItemsSource = dst.Tables["Teacher"].DefaultView;
-                teacherBox.SelectedValuePath = dst.Tables["Teacher"].Columns[0].ToString();
+                teacherBox.SelectedValuePath = dst.Tables["Teacher"].Columns[2].ToString();
                 teacherBox.DisplayMemberPath = dst.Tables["Teacher"].Columns[1].ToString();
             }
             catch (SqlException ex)
@@ -64,7 +64,7 @@ namespace Sport_Application_Teacher__New_Design_
         {
             try
             {
-                connect($"SELECT [ФИО Студента], [Всего отработано часов] FROM [Sum_HoursFull] WHERE [Группа] = '17ИТ-1'", "Hours");
+                connect($"SELECT [ФИО Студента], [Всего отработано часов] FROM [Sum_HoursFull] WHERE [Группа] = '{value.Text}'", "Hours");
                 studHours.ItemsSource = dst.Tables["Hours"].DefaultView;
             }
             catch (SqlException ex)

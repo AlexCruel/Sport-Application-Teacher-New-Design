@@ -10,7 +10,7 @@
 
     <Grid>
         <DataGrid x:Name="studHoursGrid" FontSize="22"/>
-        <Button Content="Назад" Width="95" Height="35" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonBack"/>
+        <Button Content="Выход" Width="95" Height="35" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonBack"/>
         <Button Content="Вперед" Width="95" Height="35" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ButtonNext"/>
     </Grid>
 </Page>

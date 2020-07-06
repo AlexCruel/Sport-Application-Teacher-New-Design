@@ -34,7 +34,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
 
         private void ButtonBack(object sender, RoutedEventArgs e)
         {
-            testFrame.Content = new AnalysisPage(testFrame);
+            testFrame.Content = new HomePage();
         }
 
         private void ButtonNext(object sender, RoutedEventArgs e)

@@ -56,7 +56,7 @@ namespace Sport_Application_Teacher__New_Design_
 
         private void Analysis_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            testFrame.Content = new AnalysisPage(nameText, testFrame);
+            testFrame.Content = new AnalysisPage(testFrame, nameNumber);
         }
     }
 }
