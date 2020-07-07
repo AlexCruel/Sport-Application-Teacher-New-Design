@@ -55,8 +55,11 @@ namespace Sport_Application_Teacher__New_Design_.Pages
 
         private void groupBox_GotMouseCapture(object sender, MouseEventArgs e)
         {
-            Group group = new Group(groupBox, specBox);
-            group.connectGroup(nameNumber);
+            if (specBox.Text != "")
+            {
+                Group group = new Group(groupBox, specBox);
+                group.connectGroup(nameNumber);
+            }
         }
 
         private void buttonShow_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
