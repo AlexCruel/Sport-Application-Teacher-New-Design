@@ -11,5 +11,6 @@
     <Grid>
         <DataGrid x:Name="studHoursGrid" FontSize="22"/>
         <Button Content="Назад" Width="95" Height="35" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonBack"/>
+        <Button x:Name="nameStudBlock" Height="40" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="22"/>
     </Grid>
 </Page>

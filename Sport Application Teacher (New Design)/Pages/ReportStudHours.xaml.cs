@@ -29,6 +29,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             InitializeComponent();
             testFrame = frame;
             groupBox = group;
+            nameStudBlock.Content = name;
             teacher.connectStud(studHoursGrid, name);
         }
 
