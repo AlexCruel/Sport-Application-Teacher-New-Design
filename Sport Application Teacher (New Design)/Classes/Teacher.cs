@@ -75,10 +75,15 @@ namespace Sport_Application_Teacher__New_Design_
         }
 
         public string getStudName(DataGrid studHours)
-        {
-            TextBlock value = (TextBlock)studHours.Columns[0].GetCellContent(studHours.SelectedItem);
+        {   
+            if (studHours.SelectedItem != null)
+            {
+                TextBlock value = (TextBlock)studHours.Columns[0].GetCellContent(studHours.SelectedItem);
+                return value.Text;
+            }
 
-            return value.Text;
+            return "nope";
+
         }
 
         public void connectStud(DataGrid studHours, string studName)

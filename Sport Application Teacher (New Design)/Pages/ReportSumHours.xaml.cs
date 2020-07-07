@@ -40,7 +40,11 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         private void ButtonNext(object sender, RoutedEventArgs e)
         {
             string studName = teacher.getStudName(studHoursGrid);
-            testFrame.Content = new ReportStudHours(studName, groupBox, testFrame);
+
+            if (studName == "nope")
+                MessageBox.Show("Выберите студента!");
+            else
+                testFrame.Content = new ReportStudHours(studName, groupBox, testFrame);
         }
     }
 }
