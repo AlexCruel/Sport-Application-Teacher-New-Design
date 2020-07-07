@@ -43,6 +43,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         {
             Specialty spec = new Specialty(specBox, facultyBox);
             spec.connectSpec();
+            groupBox.DisplayMemberPath = "nope";
         }
 
         private void ButtonShowHours(object sender, RoutedEventArgs e)
