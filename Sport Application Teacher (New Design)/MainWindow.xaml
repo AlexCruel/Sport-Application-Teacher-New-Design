@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="White">
+        mc:Ignorable="d" Height="600" Width="1080" WindowStartupLocation="CenterScreen" Foreground="White" WindowStyle="None" ResizeMode="NoResize">
 
     <Window.Resources>
         <Storyboard x:Key="MenuOpen">
@@ -53,7 +53,7 @@
         <!--MenuBar-->
         <Grid x:Name="MenuBar" Width="60" HorizontalAlignment="Left" Background="#FF174B89" Visibility="Hidden">
             <StackPanel>
-                <Grid Height="150" Background="White">
+                <Grid Height="150" Background="#FFEEEEEE">
                     <Button x:Name="ButtonOpenMenu" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}"
                             VerticalAlignment="Top" HorizontalAlignment="Right" Click="ButtonOpenMenu_Click">
                         <materialDesign:PackIcon Kind="Menu" Width="25" Height="25" Foreground="#FF174B89"/>
