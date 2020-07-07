@@ -25,13 +25,15 @@ namespace Sport_Application_Teacher__New_Design_
         TextBlock nameText = new TextBlock();
         TextBlock nameNumber = new TextBlock();
         Frame frame = new Frame();
+        Grid MenuBar = new Grid();
 
-        public AuthPage(TextBlock text, Frame testFrame, TextBlock number)
+        public AuthPage(TextBlock text, Frame testFrame, TextBlock number, Grid menu)
         {
             InitializeComponent();
             nameText = text;
             frame = testFrame;
             nameNumber = number;
+            MenuBar = menu;
             teacher.connectTeacher(loginBox);
         }
 
@@ -46,6 +48,7 @@ namespace Sport_Application_Teacher__New_Design_
                 nameText.Text = loginBox.Text;
                 nameNumber.Text = teacher.Dst.Tables["Teacher"].Rows[index][0].ToString();
                 frame.Content = new HomePage();
+                MenuBar.Visibility = Visibility.Visible;
                 teacher.Dst.Clear();
             }
             else

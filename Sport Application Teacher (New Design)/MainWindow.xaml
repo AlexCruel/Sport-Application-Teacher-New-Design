@@ -40,18 +40,18 @@
                 <TextBlock Text="Some Text" VerticalAlignment="Center" FontSize="18"/>
                 <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel Width="150">
-                        <Button Content="Account"/>
-                        <Button Content="Settings"/>
-                        <Button Content="Help"/>
+                        <Button Content="Аккаунт"/>
+                        <Button Content="Настройки"/>
+                        <Button Content="Помощь"/>
                         <Separator/>
-                        <Button x:Name="ButtonPopUpLogout" Content="Logout" Click="ButtonPopUpLogout_Click"/>
+                        <Button x:Name="ButtonPopUpLogout" Content="Завершить" Click="ButtonPopUpLogout_Click"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
             </StackPanel>
         </Grid>
         
         <!--MenuBar-->
-        <Grid x:Name="MenuBar" Width="60" HorizontalAlignment="Left" Background="#FF174B89">
+        <Grid x:Name="MenuBar" Width="60" HorizontalAlignment="Left" Background="#FF174B89" Visibility="Hidden">
             <StackPanel>
                 <Grid Height="150" Background="White">
                     <Button x:Name="ButtonOpenMenu" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}"
@@ -68,7 +68,7 @@
                     </StackPanel>
                 </Grid>
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="White">
-                    <ListViewItem MouseDoubleClick="Home_MouseDoubleClick" >
+                    <ListViewItem Height="60" MouseDoubleClick="Home_MouseDoubleClick">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Главная" VerticalAlignment="Center" Margin="20 10"/>
@@ -76,26 +76,26 @@
                     </ListViewItem>
                     <ListViewItem Height="60" MouseDoubleClick="Analysis_MouseDoubleClick">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="GoogleAnalytics" Width="25" Height="24" Margin="10" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="TableAccount" Width="25" Height="24" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Анализ" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Ticket" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Tickets" VerticalAlignment="Center" Margin="20 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Message" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Messages" VerticalAlignment="Center" Margin="20 10"/>
+                            <materialDesign:PackIcon Kind="GoogleAnalytics" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <TextBlock Text="Статистика" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Github" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Github" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="Разработка" VerticalAlignment="Center" Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="60" MouseDoubleClick="Shutdown_MouseDoubleClick">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Shutdown" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <TextBlock Text="Завершить" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
@@ -104,9 +104,5 @@
 
         <Frame x:Name="testFrame" NavigationUIVisibility="Hidden"/>
         
-        <!--Analys Button-->
-        <Grid x:Name="analysisGrid" Width="400" Height="400" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden">
-            <ListBox x:Name="groupBox" Width="200" Height="200" HorizontalAlignment="Center"/>
-        </Grid>
     </Grid>
 </Window>

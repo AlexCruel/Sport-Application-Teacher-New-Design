@@ -27,7 +27,7 @@ namespace Sport_Application_Teacher__New_Design_
         public MainWindow()
         {
             InitializeComponent();
-            testFrame.Content = new AuthPage(nameText, testFrame, nameNumber);
+            testFrame.Content = new AuthPage(nameText, testFrame, nameNumber, MenuBar);
         }
 
         private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
@@ -57,6 +57,11 @@ namespace Sport_Application_Teacher__New_Design_
         private void Analysis_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             testFrame.Content = new AnalysisPage(testFrame, nameNumber);
+        }
+
+        private void Shutdown_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
