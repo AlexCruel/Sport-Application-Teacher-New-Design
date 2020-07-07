@@ -42,7 +42,7 @@ namespace Sport_Application_Teacher__New_Design_
             int index = loginBox.SelectedIndex;
             string value = teacher.Dst.Tables["Teacher"].Rows[index][2].ToString();
 
-            if (passwordBox.Text == value)
+            if (passwordBox.Password == value)
             {
                 GridLogin.Visibility = Visibility.Hidden;
                 nameText.Text = loginBox.Text;

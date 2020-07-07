@@ -17,7 +17,7 @@
             </StackPanel>
             <StackPanel Margin="15">
                 <TextBlock Text="Пароль" HorizontalAlignment="Left" FontSize="15" Foreground="Black" Margin="20 0"/>
-                <TextBox x:Name="passwordBox" Width="400" FontSize="20" Foreground="Black" Margin="20 0"/>
+                <PasswordBox x:Name="passwordBox" Width="400" FontSize="20" Foreground="Black" Margin="20 0"/>
             </StackPanel>
         </StackPanel>
         <Button Content="Вход" Width="90" Height="30" Margin="10" VerticalAlignment="Bottom" Click="ButtonEnter"/>
