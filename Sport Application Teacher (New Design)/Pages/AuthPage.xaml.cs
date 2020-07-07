@@ -48,7 +48,7 @@ namespace Sport_Application_Teacher__New_Design_
                 nameText.Text = loginBox.Text;
                 nameNumber.Text = teacher.Dst.Tables["Teacher"].Rows[index][0].ToString();
                 frame.Content = new HomePage();
-                MenuBar.Visibility = Visibility.Visible;
+                MenuBar.IsEnabled = true;
                 teacher.Dst.Clear();
             }
             else

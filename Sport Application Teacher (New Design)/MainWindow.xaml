@@ -51,7 +51,7 @@
         </Grid>
         
         <!--MenuBar-->
-        <Grid x:Name="MenuBar" Width="60" HorizontalAlignment="Left" Background="#FF174B89" Visibility="Hidden">
+        <Grid x:Name="MenuBar" Width="60" HorizontalAlignment="Left" Background="#FF174B89" IsEnabled="False">
             <StackPanel>
                 <Grid Height="150" Background="#FFEEEEEE">
                     <Button x:Name="ButtonOpenMenu" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}"

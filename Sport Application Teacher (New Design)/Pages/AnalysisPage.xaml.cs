@@ -45,15 +45,23 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             spec.connectSpec();
         }
 
-        private void specBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ButtonShowHours(object sender, RoutedEventArgs e)
+        {
+            if (groupBox.Text != "")
+                testFrame.Content = new ReportSumHours(groupBox, testFrame);
+            else
+                MessageBox.Show("Укажите группу!");
+        }
+
+        private void groupBox_GotMouseCapture(object sender, MouseEventArgs e)
         {
             Group group = new Group(groupBox, specBox);
             group.connectGroup(nameNumber);
         }
 
-        private void ButtonShowHours(object sender, RoutedEventArgs e)
+        private void buttonShow_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            testFrame.Content = new ReportSumHours(groupBox, testFrame);
+            buttonShow.IsEnabled = true;
         }
     }
 }
