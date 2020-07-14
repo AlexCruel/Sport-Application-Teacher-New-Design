@@ -22,12 +22,14 @@ namespace Sport_Application_Teacher__New_Design_
     /// </summary>
     public partial class MainWindow : Window
     {
-        Teacher teacher = new Teacher(); 
 
         public MainWindow()
         {
             InitializeComponent();
-            testFrame.Content = new AuthPage(nameText, testFrame, nameNumber, MenuBar);
+            App.Current.Properties["frame"] = frame;
+            App.Current.Properties["nameText"] = nameText;
+            App.Current.Properties["nameNumber"] = nameNumber;
+            frame.Content = new AuthPage(MenuBar);
         }
 
         private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
@@ -51,12 +53,12 @@ namespace Sport_Application_Teacher__New_Design_
 
         private void Home_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            testFrame.Content = new HomePage();
+            frame.Content = new HomePage();
         }
 
         private void Analysis_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            testFrame.Content = new AnalysisPage(testFrame, nameNumber);
+            frame.Content = new AnalysisPage();
         }
 
         private void Shutdown_MouseDoubleClick(object sender, MouseButtonEventArgs e)

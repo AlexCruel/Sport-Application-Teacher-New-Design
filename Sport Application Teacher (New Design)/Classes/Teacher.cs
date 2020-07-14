@@ -12,7 +12,7 @@ using System.Windows.Controls;
 
 namespace Sport_Application_Teacher__New_Design_
 {
-    class Teacher
+    public class Teacher
     {
         DataSet dst = new DataSet();
         SqlDataAdapter adapter;

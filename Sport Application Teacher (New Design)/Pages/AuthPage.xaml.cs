@@ -21,18 +21,18 @@ namespace Sport_Application_Teacher__New_Design_
     /// </summary>
     public partial class AuthPage : Page
     {
+        Frame frame = new Frame();
         Teacher teacher = new Teacher();
         TextBlock nameText = new TextBlock();
         TextBlock nameNumber = new TextBlock();
-        Frame frame = new Frame();
         Grid MenuBar = new Grid();
 
-        public AuthPage(TextBlock text, Frame testFrame, TextBlock number, Grid menu)
+        public AuthPage(Grid menu)
         {
             InitializeComponent();
-            nameText = text;
-            frame = testFrame;
-            nameNumber = number;
+            frame = (Frame)App.Current.Properties["frame"];
+            nameText = (TextBlock)App.Current.Properties["nameText"];
+            nameNumber = (TextBlock)App.Current.Properties["nameNumber"];
             MenuBar = menu;
             teacher.connectTeacher(loginBox);
         }

@@ -20,14 +20,14 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     /// </summary>
     public partial class ReportStudHours : Page
     {
-        Frame testFrame = new Frame();
+        Frame frame = new Frame();
         Teacher teacher = new Teacher();
         ComboBox groupBox = new ComboBox();
 
-        public ReportStudHours(string name, ComboBox group, Frame frame)
+        public ReportStudHours(string name, ComboBox group)
         {
             InitializeComponent();
-            testFrame = frame;
+            frame = (Frame)App.Current.Properties["frame"];
             groupBox = group;
             nameStudBlock.Content = name;
             teacher.connectStud(studHoursGrid, name);
@@ -35,7 +35,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
 
         private void ButtonBack(object sender, RoutedEventArgs e)
         {
-            testFrame.Content = new ReportSumHours(groupBox, testFrame);
+            frame.Content = new ReportSumHours(groupBox);
         }
     }
 }

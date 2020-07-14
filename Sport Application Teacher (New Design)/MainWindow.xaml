@@ -102,7 +102,7 @@
             </StackPanel>
         </Grid>
 
-        <Frame x:Name="testFrame" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
         
     </Grid>
 </Window>

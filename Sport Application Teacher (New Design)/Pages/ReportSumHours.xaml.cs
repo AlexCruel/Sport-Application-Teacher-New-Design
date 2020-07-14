@@ -20,21 +20,21 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     /// </summary>
     public partial class ReportSumHours : Page
     {
+        Frame frame = new Frame();
         ComboBox groupBox = new ComboBox();
-        Frame testFrame = new Frame();
         Teacher teacher = new Teacher();
 
-        public ReportSumHours(ComboBox group, Frame frame)
+        public ReportSumHours(ComboBox group)
         {
             InitializeComponent();
+            frame = (Frame)App.Current.Properties["frame"];
             groupBox = group;
-            testFrame = frame;
             teacher.connectStudHours(groupBox, studHoursGrid);
         }
 
         private void ButtonBack(object sender, RoutedEventArgs e)
         {
-            testFrame.Content = new HomePage();
+            frame.Content = new HomePage();
         }
 
         private void ButtonNext(object sender, RoutedEventArgs e)
@@ -44,7 +44,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             if (studName == "nope")
                 MessageBox.Show("Выберите студента!");
             else
-                testFrame.Content = new ReportStudHours(studName, groupBox, testFrame);
+                frame.Content = new ReportStudHours(studName, groupBox);
         }
     }
 }

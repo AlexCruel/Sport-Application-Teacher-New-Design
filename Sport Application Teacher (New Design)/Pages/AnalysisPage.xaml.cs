@@ -21,14 +21,14 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     /// </summary>
     public partial class AnalysisPage : Page
     {
-        Frame testFrame = new Frame();
+        Frame frame = new Frame();
         TextBlock nameNumber = new TextBlock();
 
-        public AnalysisPage(Frame frame, TextBlock name)
+        public AnalysisPage()
         {
             InitializeComponent();
-            testFrame = frame;
-            nameNumber = name;
+            frame = (Frame)App.Current.Properties["frame"];
+            nameNumber = (TextBlock)App.Current.Properties["nameNumber"];
             Faculty faculty = new Faculty(facultyBox);
             faculty.connectFaculty();
         }
@@ -36,7 +36,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         public AnalysisPage(Frame frame)
         {
             InitializeComponent();
-            testFrame = frame;
+            frame = (Frame)App.Current.Properties["frame"];
         }
 
         private void facultyBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -49,7 +49,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         private void ButtonShowHours(object sender, RoutedEventArgs e)
         {
             if (groupBox.Text != "")
-                testFrame.Content = new ReportSumHours(groupBox, testFrame);
+                frame.Content = new ReportSumHours(groupBox);
             else
                 MessageBox.Show("Укажите группу!");
         }
