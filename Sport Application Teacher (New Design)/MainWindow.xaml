@@ -40,9 +40,9 @@
                 <TextBlock Text="Some Text" VerticalAlignment="Center" FontSize="18"/>
                 <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel Width="150">
-                        <Button Content="Аккаунт"/>
-                        <Button Content="Настройки"/>
-                        <Button Content="Помощь"/>
+                        <Button Content="Аккаунт" IsEnabled="False"/>
+                        <Button Content="Настройки" IsEnabled="False"/>
+                        <Button Content="Помощь" IsEnabled="False"/>
                         <Separator/>
                         <Button x:Name="ButtonPopUpLogout" Content="Завершить" Click="ButtonPopUpLogout_Click"/>
                     </StackPanel>
@@ -80,13 +80,13 @@
                             <TextBlock Text="Анализ" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
+                    <ListViewItem Height="60" IsEnabled="False">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="GoogleAnalytics" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Статистика" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
+                    <ListViewItem Height="60" MouseDoubleClick="ListViewItem_MouseDoubleClick">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Github" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Разработка" VerticalAlignment="Center" Margin="20 10"/>

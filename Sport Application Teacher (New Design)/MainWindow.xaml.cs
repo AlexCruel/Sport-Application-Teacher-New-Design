@@ -65,5 +65,10 @@ namespace Sport_Application_Teacher__New_Design_
         {
             Application.Current.Shutdown();
         }
+
+        private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/AlexCruel/Sport-Application-Teacher-New-Design");
+        }
     }
 }

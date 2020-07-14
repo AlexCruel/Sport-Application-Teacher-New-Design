@@ -62,10 +62,5 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 group.connectGroup(nameNumber);
             }
         }
-
-        private void buttonShow_FocusableChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            buttonShow.IsEnabled = true;
-        }
     }
 }
