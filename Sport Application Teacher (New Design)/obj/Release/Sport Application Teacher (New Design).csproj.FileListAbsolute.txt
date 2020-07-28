@@ -8,3 +8,25 @@ D:\Проекты\Sport App For University\Sport Application Teacher (New Design
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\App.g.cs
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design)_MarkupCompile.cache
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design)_MarkupCompile.lref
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\Sport Application Teacher (New Design).exe.config
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\Sport Application Teacher (New Design).exe
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\Sport Application Teacher (New Design).pdb
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\MaterialDesignColors.dll
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\MaterialDesignThemes.Wpf.dll
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\MaterialDesignColors.pdb
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\MaterialDesignThemes.Wpf.pdb
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\MaterialDesignThemes.Wpf.xml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\App.baml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Pages\AnalysisPage.baml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Pages\AuthPage.baml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\MainWindow.baml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Pages\HomePage.baml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Pages\ReportStudHours.baml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Pages\ReportSumHours.baml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design).g.resources
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport_Application_Teacher__New_Design_.Properties.Resources.resources
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design).csproj.GenerateResource.cache
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design).csproj.CoreCompileInputs.cache
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design).csproj.CopyComplete
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design).exe
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design).pdb
