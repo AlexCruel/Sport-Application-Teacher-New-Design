@@ -39,20 +39,25 @@ namespace Sport_Application_Teacher__New_Design_
 
         private void ButtonEnter(object sender, RoutedEventArgs e)
         {
-            int index = loginBox.SelectedIndex;
-            string value = teacher.Dst.Tables["Teacher"].Rows[index][2].ToString();
-
-            if (passwordBox.Password == value)
+            if (loginBox.Text != "")
             {
-                GridLogin.Visibility = Visibility.Hidden;
-                nameText.Text = loginBox.Text;
-                nameNumber.Text = teacher.Dst.Tables["Teacher"].Rows[index][0].ToString();
-                frame.Content = new HomePage();
-                MenuBar.IsEnabled = true;
-                teacher.Dst.Clear();
+                int index = loginBox.SelectedIndex;
+                string value = teacher.Dst.Tables["Teacher"].Rows[index][2].ToString();
+
+                if (passwordBox.Password == value && loginBox.Text != null)
+                {
+                    GridLogin.Visibility = Visibility.Hidden;
+                    nameText.Text = loginBox.Text;
+                    nameNumber.Text = teacher.Dst.Tables["Teacher"].Rows[index][0].ToString();
+                    frame.Content = new HomePage();
+                    MenuBar.IsEnabled = true;
+                    teacher.Dst.Clear();
+                }
+                else
+                    MessageBox.Show("Неверный пароль для данного пользователя!", "Внимание", MessageBoxButton.OK);
             }
             else
-                MessageBox.Show("Неверный пароль для данного пользователя!", "Внимание", MessageBoxButton.OK);
+                MessageBox.Show("Введите логин!", "Внимание", MessageBoxButton.OK);
         }
     }
 }
