@@ -90,7 +90,7 @@ namespace Sport_Application_Teacher__New_Design_
         {
             try
             {
-                connect($"SELECT [Дата], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [ФИО_Студ] = '{studName}'", "Student");
+                connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [ФИО_Студ] = '{studName}'", "Student");
                 studHours.ItemsSource = dst.Tables["Student"].DefaultView;
             }
             catch (SqlException ex)
