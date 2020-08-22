@@ -37,5 +37,13 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         {
             frame.Content = new ReportSumHours(groupBox);
         }
+
+        private void studHoursGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            if (e.PropertyName == "Дата")
+            {
+                (e.Column as DataGridTextColumn).Binding.StringFormat = "dd/MM/yyyy H:mm:ss";
+            }
+        }
     }
 }
