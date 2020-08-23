@@ -49,7 +49,7 @@
                 </materialDesign:PopupBox>
             </StackPanel>
         </Grid>
-        
+
         <!--MenuBar-->
         <Grid x:Name="MenuBar" Width="60" HorizontalAlignment="Left" Background="#FF174B89" IsEnabled="False">
             <StackPanel>
@@ -103,6 +103,6 @@
         </Grid>
 
         <Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
-        
+
     </Grid>
 </Window>

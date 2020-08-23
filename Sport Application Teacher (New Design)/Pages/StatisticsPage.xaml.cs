@@ -36,33 +36,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             pieChartGroup.LegendLocation = LegendLocation.Bottom;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            SeriesCollection series = new SeriesCollection();
-
-            int[] mass = new int[5] { 25, 25, 25, 25, 25 };
-
-            foreach (var obj in mass)
-                series.Add(new PieSeries() { Title = "Btn1", Values = new ChartValues<int> { obj } });
-
-            pieChartGroup.Series = series;
-            pieChartGroup.LegendLocation = LegendLocation.Bottom;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            SeriesCollection series = new SeriesCollection();
-
-            int[] mass = new int[5] { 21, 22, 23, 10, 3 };
-
-            foreach (var obj in mass)
-                series.Add(new PieSeries() { Title = "Btn2", Values = new ChartValues<int> { obj } });
-
-            pieChartGroup.Series = series;
-            pieChartGroup.LegendLocation = LegendLocation.Bottom;
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void ButtonShowStat(object sender, RoutedEventArgs e)
         {
             SeriesCollection series = new SeriesCollection();
             Group group = new Group(groupBox);

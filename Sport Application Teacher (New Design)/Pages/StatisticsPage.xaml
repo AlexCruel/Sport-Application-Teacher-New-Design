@@ -12,11 +12,7 @@
     <Grid>
         <Wpf:PieChart x:Name="pieChartGroup" HorizontalAlignment="Center" VerticalAlignment="Center" Height="301" Margin="10,10,471,139" Width="319">
             <Wpf:PieChart.Series>
-                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
-                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
-                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
-                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
-                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
+                <Wpf:PieSeries Title="Объект" Values="100" DataLabels="True"/>
             </Wpf:PieChart.Series>
         </Wpf:PieChart>
         <Wpf:CartesianChart Margin="569,109,92,246">
@@ -28,9 +24,7 @@
                 <Wpf:CandleSeries Title="dsfdsfsd" Values="25" DataLabels="True"/>
             </Wpf:CartesianChart.Series>
         </Wpf:CartesianChart>
-        <Button Content="Button1" HorizontalAlignment="Left" Margin="453,541,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click_1"/>
-        <Button Content="Button2" HorizontalAlignment="Left" Margin="592,541,0,0" VerticalAlignment="Top" Width="89" Click="Button_Click"/>
-        <Button Content="Показать" HorizontalAlignment="Left" Margin="261,506,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click_2"/>
+        <Button Content="Показать" HorizontalAlignment="Left" Margin="261,521,0,0" VerticalAlignment="Top" Width="100" Click="ButtonShowStat"/>
         <ComboBox x:Name="groupBox" FontSize="20" HorizontalAlignment="Left" Margin="193,444,0,0" VerticalAlignment="Top" Width="217" GotMouseCapture="groupBox_GotMouseCapture"/>
     </Grid>
 </Page>
