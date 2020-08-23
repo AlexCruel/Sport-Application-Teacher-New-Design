@@ -36,6 +36,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             Group group = new Group(groupBox);
             group.connectGroupStat(nameNumber);
             pieChartGroup.LegendLocation = LegendLocation.Bottom;
+            pieChartStudent.LegendLocation = LegendLocation.Bottom;
         }
 
         private void groupBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
