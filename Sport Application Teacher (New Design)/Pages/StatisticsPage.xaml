@@ -1,0 +1,35 @@
+﻿<Page x:Class="Sport_Application_Teacher__New_Design_.Pages.StatisticsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Pages"
+      xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1080"
+      Title="StatisticsPage">
+
+    <Grid>
+        <Wpf:PieChart x:Name="pieChart1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="301" Margin="10,10,471,139" Width="319">
+            <Wpf:PieChart.Series>
+                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
+                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
+                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
+                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
+                <Wpf:PieSeries Title="ddsfds" Values="25" DataLabels="True"/>
+            </Wpf:PieChart.Series>
+        </Wpf:PieChart>
+        <Wpf:CartesianChart Margin="569,109,92,246">
+            <Wpf:CartesianChart.Series>
+                <Wpf:CandleSeries Title="dsfdsfsd" Values="25" DataLabels="True"/>
+                <Wpf:CandleSeries Title="dsfdsfsd" Values="25" DataLabels="True"/>
+                <Wpf:CandleSeries Title="dsfdsfsd" Values="25" DataLabels="True"/>
+                <Wpf:CandleSeries Title="dsfdsfsd" Values="25" DataLabels="True"/>
+                <Wpf:CandleSeries Title="dsfdsfsd" Values="25" DataLabels="True"/>
+            </Wpf:CartesianChart.Series>
+        </Wpf:CartesianChart>
+        <Button Content="Button1" HorizontalAlignment="Left" Margin="198,531,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click_1"/>
+        <Button Content="Button2" HorizontalAlignment="Left" Margin="337,531,0,0" VerticalAlignment="Top" Width="89" Click="Button_Click"/>
+        <Button Content="Click!" HorizontalAlignment="Left" Margin="290,464,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+    </Grid>
+</Page>

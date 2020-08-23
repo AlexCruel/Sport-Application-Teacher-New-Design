@@ -25,6 +25,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             specBox = spec;
         }
 
+        public Group() 
+        {
+
+        }
+
         private void connect(string c, string a)
         {
             try
@@ -52,6 +57,25 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public Dictionary<string, int> getStat() 
+        {
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+
+            try
+            {
+                connect("SELECT [Объект], [Группа], SUM([ОтрабЧасы]) FROM [ListJournal] GROUP BY [Объект], [Группа]", "statistics");
+
+                for (int i = 0; i < dst.Tables["statistics"].Rows.Count; i++) 
+                    dict.Add((string)dst.Tables["statistics"].Rows[i][0], (int)dst.Tables["statistics"].Rows[i][2]);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dict;
         }
     }
 }

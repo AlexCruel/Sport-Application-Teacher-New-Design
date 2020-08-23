@@ -80,13 +80,13 @@
                             <TextBlock Text="Анализ" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60" IsEnabled="False">
+                    <ListViewItem Height="60" MouseDoubleClick="Statistics_MouseDoubleClick">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="GoogleAnalytics" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Статистика" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60" MouseDoubleClick="ListViewItem_MouseDoubleClick">
+                    <ListViewItem Height="60" MouseDoubleClick="GitHub_MouseDoubleClick">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Github" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Разработка" VerticalAlignment="Center" Margin="20 10"/>

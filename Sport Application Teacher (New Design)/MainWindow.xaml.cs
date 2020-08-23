@@ -61,14 +61,19 @@ namespace Sport_Application_Teacher__New_Design_
             frame.Content = new AnalysisPage();
         }
 
+        private void GitHub_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/AlexCruel/Sport-Application-Teacher-New-Design");
+        }
+
+        private void Statistics_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            frame.Content = new StatisticsPage();
+        }
+
         private void Shutdown_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-        private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/AlexCruel/Sport-Application-Teacher-New-Design");
         }
     }
 }
