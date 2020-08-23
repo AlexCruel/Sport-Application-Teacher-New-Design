@@ -1,4 +1,5 @@
-﻿using Sport_Application_Teacher__New_Design_.Pages;
+﻿using Sport_Application_Teacher__New_Design_.Classes;
+using Sport_Application_Teacher__New_Design_.Pages;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -74,6 +75,25 @@ namespace Sport_Application_Teacher__New_Design_
 
         }
 
+        public Dictionary<string, int> getStat(ComboBox studBox)
+        {
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+
+            try
+            {
+                connect($"EXEC [SumHoursFull] '{studBox.SelectedValue}'", "studStat");
+
+                for (int i = 0; i < dst.Tables["studStat"].Rows.Count; i++)
+                    dict.Add((string)dst.Tables["studStat"].Rows[i][0], (int)dst.Tables["studStat"].Rows[i][1]);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dict;
+        }
+
         public string getStudName(DataGrid studHours)
         {   
             if (studHours.SelectedItem != null)
@@ -92,6 +112,21 @@ namespace Sport_Application_Teacher__New_Design_
             {
                 connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [ФИО_Студ] = '{studName}'", "Student");
                 studHours.ItemsSource = dst.Tables["Student"].DefaultView;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void connectStudStat(ComboBox groupBox, ComboBox studBox)
+        {
+            try
+            {
+                connect($"SELECT * FROM [Студенты] WHERE [КодГруппы] = '{groupBox.SelectedValue}'", "studStat");
+                studBox.ItemsSource = dst.Tables["studStat"].DefaultView;
+                studBox.SelectedValuePath = dst.Tables["studStat"].Columns[0].ToString();
+                studBox.DisplayMemberPath = dst.Tables["studStat"].Columns[2].ToString();
             }
             catch (SqlException ex)
             {

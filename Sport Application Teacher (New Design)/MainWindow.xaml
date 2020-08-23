@@ -37,7 +37,7 @@
         <Grid Height="60" VerticalAlignment="Top" Background="#FF0193D6">
             <TextBlock Text="Journal Hunter" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock Text="v1.0" VerticalAlignment="Center" FontSize="18"/>
+                <TextBlock Text="v1.1.0" VerticalAlignment="Center" FontSize="18"/>
                 <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel Width="150">
                         <Button Content="Аккаунт" IsEnabled="False"/>

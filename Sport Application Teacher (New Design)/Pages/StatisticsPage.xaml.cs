@@ -33,7 +33,15 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             InitializeComponent();
             frame = (Frame)App.Current.Properties["frame"];
             nameNumber = (TextBlock)App.Current.Properties["nameNumber"];
+            Group group = new Group(groupBox);
+            group.connectGroupStat(nameNumber);
             pieChartGroup.LegendLocation = LegendLocation.Bottom;
+        }
+
+        private void groupBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Teacher teacher = new Teacher();
+            teacher.connectStudStat(groupBox, studBox);
         }
 
         private void ButtonShowStat(object sender, RoutedEventArgs e)
@@ -49,10 +57,17 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             pieChartGroup.Series = series;
         }
 
-        private void groupBox_GotMouseCapture(object sender, MouseEventArgs e)
+        private void ButtonStudStat(object sender, RoutedEventArgs e)
         {
-            Group group = new Group(groupBox);
-            group.connectGroupStat(nameNumber);
+            SeriesCollection series = new SeriesCollection();
+            Teacher teacher = new Teacher();
+
+            Dictionary<string, int> dict = teacher.getStat(studBox);
+            ICollection<string> keys = dict.Keys;
+
+            foreach (string item in keys)
+                series.Add(new PieSeries() { Title = item, Values = new ChartValues<int> { dict[item] } });
+            pieChartStudent.Series = series;
         }
     }
 }

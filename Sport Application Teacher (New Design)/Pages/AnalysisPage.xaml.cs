@@ -46,14 +46,6 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             groupBox.DisplayMemberPath = "nope";
         }
 
-        private void ButtonShowHours(object sender, RoutedEventArgs e)
-        {
-            if (groupBox.Text != "")
-                frame.Content = new ReportSumHours(groupBox);
-            else
-                MessageBox.Show("Укажите группу!");
-        }
-
         private void groupBox_GotMouseCapture(object sender, MouseEventArgs e)
         {
             if (specBox.Text != "")
@@ -61,6 +53,16 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 Group group = new Group(groupBox, specBox);
                 group.connectGroup(nameNumber);
             }
+            else
+                MessageBox.Show("asdas");
+        }
+
+        private void ButtonShowHours(object sender, RoutedEventArgs e)
+        {
+            if (groupBox.Text != "")
+                frame.Content = new ReportSumHours(groupBox);
+            else
+                MessageBox.Show("Укажите группу!");
         }
     }
 }
