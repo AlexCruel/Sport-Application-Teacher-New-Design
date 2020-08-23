@@ -24,12 +24,16 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     /// </summary>
     public partial class StatisticsPage : Page
     {
+        Frame frame = new Frame();
+        TextBlock nameNumber = new TextBlock();
         Func<ChartPoint, string> label = chartpoint => string.Format("{0} ({1:P", chartpoint.Y, chartpoint.Participation);
 
         public StatisticsPage()
         {
             InitializeComponent();
-            pieChart1.LegendLocation = LegendLocation.Bottom;
+            frame = (Frame)App.Current.Properties["frame"];
+            nameNumber = (TextBlock)App.Current.Properties["nameNumber"];
+            pieChartGroup.LegendLocation = LegendLocation.Bottom;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -41,8 +45,8 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             foreach (var obj in mass)
                 series.Add(new PieSeries() { Title = "Btn1", Values = new ChartValues<int> { obj } });
 
-            pieChart1.Series = series;
-            pieChart1.LegendLocation = LegendLocation.Bottom;
+            pieChartGroup.Series = series;
+            pieChartGroup.LegendLocation = LegendLocation.Bottom;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -54,21 +58,27 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             foreach (var obj in mass)
                 series.Add(new PieSeries() { Title = "Btn2", Values = new ChartValues<int> { obj } });
 
-            pieChart1.Series = series;
-            pieChart1.LegendLocation = LegendLocation.Bottom;
+            pieChartGroup.Series = series;
+            pieChartGroup.LegendLocation = LegendLocation.Bottom;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             SeriesCollection series = new SeriesCollection();
-            Group group = new Group();
+            Group group = new Group(groupBox);
 
-            Dictionary<string, int> dict = group.getStat();
+            Dictionary<string, int> dict = group.getStat(groupBox);
             ICollection<string> keys = dict.Keys;
 
             foreach (string item in keys)
                 series.Add(new PieSeries() { Title = item, Values = new ChartValues<int> { dict[item] } });
-            pieChart1.Series = series;
+            pieChartGroup.Series = series;
+        }
+
+        private void groupBox_GotMouseCapture(object sender, MouseEventArgs e)
+        {
+            Group group = new Group(groupBox);
+            group.connectGroupStat(nameNumber);
         }
     }
 }

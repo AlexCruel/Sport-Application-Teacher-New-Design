@@ -25,9 +25,9 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             specBox = spec;
         }
 
-        public Group() 
+        public Group(ComboBox group) 
         {
-
+            groupBox = group;
         }
 
         private void connect(string c, string a)
@@ -59,13 +59,28 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public Dictionary<string, int> getStat() 
+        public void connectGroupStat(TextBlock nameNumber)
+        {
+            try
+            {
+                connect($"SELECT * FROM [Группы] WHERE [НомерПрепод] = '{nameNumber.Text}'", "groupStat");
+                groupBox.ItemsSource = dst.Tables["groupStat"].DefaultView;
+                groupBox.SelectedValuePath = dst.Tables["groupStat"].Columns[0].ToString();
+                groupBox.DisplayMemberPath = dst.Tables["groupStat"].Columns[2].ToString();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public Dictionary<string, int> getStat(ComboBox groupBox) 
         {
             Dictionary<string, int> dict = new Dictionary<string, int>();
 
             try
             {
-                connect("SELECT [Объект], [Группа], SUM([ОтрабЧасы]) FROM [ListJournal] GROUP BY [Объект], [Группа]", "statistics");
+                connect($"SELECT [Объект], [Группа], SUM([ОтрабЧасы]) FROM [ListJournal] WHERE [Группа] = '{groupBox.Text}' GROUP BY [Объект], [Группа]", "statistics");
 
                 for (int i = 0; i < dst.Tables["statistics"].Rows.Count; i++) 
                     dict.Add((string)dst.Tables["statistics"].Rows[i][0], (int)dst.Tables["statistics"].Rows[i][2]);
