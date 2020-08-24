@@ -53,8 +53,6 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 Group group = new Group(groupBox, specBox);
                 group.connectGroup(nameNumber);
             }
-            else
-                MessageBox.Show("asdas");
         }
 
         private void ButtonShowHours(object sender, RoutedEventArgs e)
