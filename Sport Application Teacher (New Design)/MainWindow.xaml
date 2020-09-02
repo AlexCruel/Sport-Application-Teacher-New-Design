@@ -101,7 +101,7 @@
                 </ListView>
             </StackPanel>
         </Grid>
-
+        
         <Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
 
     </Grid>

@@ -30,3 +30,11 @@ D:\Проекты\Sport App For University\Sport Application Teacher (New Design
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design).csproj.CopyComplete
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design).exe
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Sport Application Teacher (New Design).pdb
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\LiveCharts.dll
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\LiveCharts.Wpf.dll
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\LiveCharts.pdb
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\LiveCharts.xml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\LiveCharts.Wpf.pdb
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Release\LiveCharts.Wpf.xml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Pages\StatisticsPage.g.cs
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Release\Pages\StatisticsPage.baml
