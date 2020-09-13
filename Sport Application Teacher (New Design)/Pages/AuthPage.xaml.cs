@@ -13,6 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ToastNotifications;
+using ToastNotifications.Lifetime;
+using ToastNotifications.Messages;
+using ToastNotifications.Position;
 
 namespace Sport_Application_Teacher__New_Design_
 {
@@ -26,6 +30,21 @@ namespace Sport_Application_Teacher__New_Design_
         TextBlock nameText = new TextBlock();
         TextBlock nameNumber = new TextBlock();
         Grid MenuBar = new Grid();
+
+        Notifier notifier = new Notifier(cfg =>
+        {
+            cfg.PositionProvider = new WindowPositionProvider(
+                parentWindow: Application.Current.MainWindow,
+                corner: Corner.TopRight,
+                offsetX: 10,
+                offsetY: 10);
+
+            cfg.LifetimeSupervisor = new TimeAndCountBasedLifetimeSupervisor(
+                notificationLifetime: TimeSpan.FromSeconds(3),
+                maximumNotificationCount: MaximumNotificationCount.FromCount(5));
+
+            cfg.Dispatcher = Application.Current.Dispatcher;
+        });
 
         public AuthPage(Grid menu)
         {
@@ -52,12 +71,13 @@ namespace Sport_Application_Teacher__New_Design_
                     frame.Content = new HomePage();
                     MenuBar.IsEnabled = true;
                     teacher.Dst.Clear();
+                    notifier.ShowSuccess("Доступ разрешен");
                 }
                 else
-                    MessageBox.Show("Неверный пароль для данного пользователя!", "Внимание", MessageBoxButton.OK);
+                    notifier.ShowError("Неверный пароль для данного пользователя!");
             }
             else
-                MessageBox.Show("Введите логин!", "Внимание", MessageBoxButton.OK);
+                notifier.ShowWarning("Введите логин!");
         }
     }
 }
