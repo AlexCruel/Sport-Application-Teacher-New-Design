@@ -45,6 +45,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         {
             InitializeComponent();
             groupBox = group;
+            groupBlock.Text = group.Text;
             teacher.connectStudHours(group, studHoursGrid);
         }
 
