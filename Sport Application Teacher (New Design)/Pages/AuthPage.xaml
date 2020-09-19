@@ -20,6 +20,6 @@
                 <PasswordBox x:Name="passwordBox" Width="400" FontSize="20" Foreground="Black" Margin="20 0"/>
             </StackPanel>
         </StackPanel>
-        <Button Content="Вход" Width="90" Height="30" Margin="10" VerticalAlignment="Bottom" Click="ButtonEnter"/>
+        <Button Content="Вход" Width="90" Height="30" Margin="10" VerticalAlignment="Bottom" Click="ButtonEnter" Background="#FF544DA5" FontWeight="Bold"/>
     </Grid>
 </Page>
