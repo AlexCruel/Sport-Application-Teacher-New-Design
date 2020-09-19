@@ -57,8 +57,12 @@ namespace Sport_Application_Teacher__New_Design_.Pages
 
         private void ButtonShowHours(object sender, RoutedEventArgs e)
         {
-            if (groupBox.Text != "")
-                frame.Content = new ReportSumHours(groupBox);
+            if (groupBox.Text != "") 
+            {
+                // frame.Content = new ReportSumHours(groupBox);
+                ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox);
+                reportSumHours.Show();
+            }
             else
                 MessageBox.Show("Укажите группу!");
         }

@@ -103,7 +103,6 @@ namespace Sport_Application_Teacher__New_Design_
             }
 
             return "nope";
-
         }
 
         public void connectStud(DataGrid studHours, string studName)

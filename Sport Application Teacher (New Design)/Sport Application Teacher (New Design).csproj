@@ -115,7 +115,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ReportStudHoursWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ReportSumHours.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportSumHoursWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,8 +139,14 @@
     <Compile Include="Pages\ReportStudHours.xaml.cs">
       <DependentUpon>ReportStudHours.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReportStudHoursWindow.xaml.cs">
+      <DependentUpon>ReportStudHoursWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ReportSumHours.xaml.cs">
       <DependentUpon>ReportSumHours.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSumHoursWindow.xaml.cs">
+      <DependentUpon>ReportSumHoursWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\StatisticsPage.xaml.cs">
       <DependentUpon>StatisticsPage.xaml</DependentUpon>
