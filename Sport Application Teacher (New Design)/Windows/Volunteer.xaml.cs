@@ -31,14 +31,14 @@ namespace Sport_Application_Teacher__New_Design_.Windows
 
         private void name_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (name.Text == "Наименование")
+            if (name.Text == "Волонтёрская работа")
                 name.Text = "";
         }
 
         private void name_LostFocus(object sender, RoutedEventArgs e)
         {
             if (name.Text == "")
-                name.Text = "Наименование";
+                name.Text = "Волонтёрская работа";
         }
 
         private void person_GotFocus(object sender, RoutedEventArgs e)
@@ -53,7 +53,7 @@ namespace Sport_Application_Teacher__New_Design_.Windows
                 person.Text = "Ответственный";
         }
 
-        private void ButtonBack(object sender, RoutedEventArgs e)
+        private void Button_Back(object sender, RoutedEventArgs e)
         {
             ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox);
             reportSumHours.Show();

@@ -16,41 +16,41 @@ using System.Windows.Shapes;
 namespace Sport_Application_Teacher__New_Design_.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для SportEvents.xaml
+    /// Логика взаимодействия для PhysicalFitness.xaml
     /// </summary>
-    public partial class SportEvents : Window
+    public partial class PhysicalFitness : Window
     {
         ComboBox groupBox = new ComboBox();
 
-        public SportEvents(string name, ComboBox group)
+        public PhysicalFitness(string name, ComboBox group)
         {
             InitializeComponent();
             studBlock.Text = name;
             groupBox = group;
         }
 
-        private void name_GotFocus(object sender, RoutedEventArgs e)
+        private void result_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (name.Text == "Мероприятие")
-                name.Text = "";
+            if (result.Text == "Результат")
+                result.Text = "";
         }
 
-        private void name_LostFocus(object sender, RoutedEventArgs e)
+        private void result_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (name.Text == "")
-                name.Text = "Мероприятие";
+            if (result.Text == "")
+                result.Text = "Результат";
         }
 
-        private void person_GotFocus(object sender, RoutedEventArgs e)
+        private void mark_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (person.Text == "Ответственный")
-                person.Text = "";
+            if (mark.Text == "Оценка")
+                mark.Text = "";
         }
 
-        private void person_LostFocus(object sender, RoutedEventArgs e)
+        private void mark_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (person.Text == "")
-                person.Text = "Ответственный";
+            if (mark.Text == "")
+                mark.Text = "Оценка";
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)

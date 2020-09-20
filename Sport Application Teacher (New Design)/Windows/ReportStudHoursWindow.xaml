@@ -8,7 +8,7 @@
         Title="ReportStudHoursWindow" Height="600" Width="1080" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
         <DataGrid x:Name="studHoursGrid" FontSize="22" AutoGeneratingColumn="studHoursGrid_AutoGeneratingColumn"/>
-        <Button Content="Назад" Width="95" Height="35" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonBack" Background="#FF544DA5" FontWeight="Bold"/>
+        <Button Content="Назад" Width="95" Height="35" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="Button_Back" Background="#FF544DA5" FontWeight="Bold"/>
         <Button x:Name="nameStudBlock" Height="40" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="22" Background="#FF544DA5"/>
     </Grid>
 </Window>

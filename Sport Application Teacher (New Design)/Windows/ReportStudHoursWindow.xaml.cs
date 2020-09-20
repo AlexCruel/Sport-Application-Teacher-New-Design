@@ -30,7 +30,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             teacher.connectStud(studHoursGrid, name);
         }
 
-        private void ButtonBack(object sender, RoutedEventArgs e)
+        private void Button_Back(object sender, RoutedEventArgs e)
         {
             ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox);
             reportSumHours.Show();

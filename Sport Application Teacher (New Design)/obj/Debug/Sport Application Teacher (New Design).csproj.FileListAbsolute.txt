@@ -50,3 +50,5 @@ D:\Проекты\Sport App For University\Sport Application Teacher (New Design
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportSections.baml
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportEvents.g.cs
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportEvents.baml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\PhysicalFitness.g.cs
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\PhysicalFitness.baml

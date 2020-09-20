@@ -30,9 +30,9 @@
             <BeginStoryboard Storyboard="{StaticResource MenuClose}"/>
         </EventTrigger>
     </Window.Triggers>
-    
+
     <Grid Background="LightGray">
-        
+
         <!--Header-->
         <Grid Height="60" VerticalAlignment="Top" Background="#FF0193D6">
             <TextBlock Text="Journal Hunter" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
@@ -103,6 +103,6 @@
         </Grid>
         
         <Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
-
+        
     </Grid>
 </Window>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="Sport_Application_Teacher__New_Design_.Windows.PhysicalFitness"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Windows"
+        mc:Ignorable="d"
+        Title="PhysicalFitness" Height="600" Width="1080" WindowStyle="None" ResizeMode="NoResize">
+    <Grid Background="#FFE5E5E5">
+        <Grid>
+            <TextBlock FontSize="20" Foreground="Black" HorizontalAlignment="Left" Margin="788,87,0,0" TextWrapping="Wrap" Text="Семестр" VerticalAlignment="Top"/>
+            <ComboBox FontSize="20" HorizontalAlignment="Left" Margin="788,114,0,0" VerticalAlignment="Top" Width="239" Height="40">
+                <ComboBoxItem Content="1"/>
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+                <ComboBoxItem Content="4"/>
+                <ComboBoxItem Content="5"/>
+            </ComboBox>
+        </Grid>
+        <Grid>
+            <TextBlock FontSize="20" Foreground="Black" HorizontalAlignment="Left" Margin="788,186,0,0" TextWrapping="Wrap" Text="Дисциплина" VerticalAlignment="Top"/>
+            <ComboBox FontSize="20" HorizontalAlignment="Left" Margin="788,213,0,0" VerticalAlignment="Top" Width="239" Height="40">
+                <ComboBoxItem Content="Прыжок в длину с места, см"/>
+                <ComboBoxItem Content="Наклон вперёд из положения сидя, см"/>
+                <ComboBoxItem Content="Сгибание, разгибание рук в упоре лёжа, раз"/>
+                <ComboBoxItem Content="Подтягивание на высокой перекладине, раз"/>
+                <ComboBoxItem Content="Поднимание туловища из положения лёжа за 1 мин"/>
+                <ComboBoxItem Content="Челночный бег 4 x 9 м.с"/>
+                <ComboBoxItem Content="Бег 30 м.с"/>
+                <ComboBoxItem Content="Бег 1,5 и 3 км"/>
+            </ComboBox>
+        </Grid>
+        <TextBlock x:Name="studBlock" HorizontalAlignment="Left" Margin="788,11,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="58" Width="239" FontSize="20" FontWeight="Bold" Foreground="#FF544DA5"/>
+        <DataGrid x:Name="studHoursGrid" FontSize="22" HorizontalAlignment="Left" Width="735"/>
+        <TextBox x:Name="result" HorizontalAlignment="Left" Height="64" Margin="788,285,0,0" TextWrapping="Wrap" Text="Результат" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="result_GotFocus" LostFocus="result_LostFocus"/>
+        <TextBox x:Name="mark" HorizontalAlignment="Left" Height="64" Margin="788,374,0,0" TextWrapping="Wrap" Text="Оценка" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="mark_GotFocus" LostFocus="mark_LostFocus"/>
+        <Button Content="Записать" Height="40" Margin="788,0,53,86" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe" FontWeight="Bold"/>
+        <Button Content="Назад" Height="40" Margin="788,0,53,16" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe" FontWeight="Bold" Click="Button_Back"/>
+    </Grid>
+</Window>

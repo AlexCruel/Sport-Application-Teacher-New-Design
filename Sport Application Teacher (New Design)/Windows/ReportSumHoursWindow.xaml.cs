@@ -106,6 +106,20 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             }
         }
 
+        private void Button_Fitness(object sender, RoutedEventArgs e)
+        {
+            string studName = teacher.getStudName(studHoursGrid);
+
+            if (studName == "nope")
+                notifier.ShowWarning("Выберите студента!");
+            else
+            {
+                PhysicalFitness fitness = new PhysicalFitness(studName, groupBox);
+                fitness.Show();
+                Close();
+            }
+        }
+
         private void Button_Exit(object sender, RoutedEventArgs e)
         {
             Close();
