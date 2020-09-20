@@ -92,11 +92,23 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             }
         }
 
+        private void Button_Events(object sender, RoutedEventArgs e)
+        {
+            string studName = teacher.getStudName(studHoursGrid);
+
+            if (studName == "nope")
+                notifier.ShowWarning("Выберите студента!");
+            else
+            {
+                SportEvents events = new SportEvents(studName, groupBox);
+                events.Show();
+                Close();
+            }
+        }
+
         private void Button_Exit(object sender, RoutedEventArgs e)
         {
             Close();
         }
-
-        
     }
 }

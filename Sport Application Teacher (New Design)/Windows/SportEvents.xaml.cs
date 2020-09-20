@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace Sport_Application_Teacher__New_Design_.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для SportSections.xaml
+    /// Логика взаимодействия для SportEvents.xaml
     /// </summary>
-    public partial class SportSections : Window
+    public partial class SportEvents : Window
     {
         ComboBox groupBox = new ComboBox();
 
-        public SportSections(string name, ComboBox group)
+        public SportEvents(string name, ComboBox group)
         {
             InitializeComponent();
             studBlock.Text = name;
@@ -31,14 +31,14 @@ namespace Sport_Application_Teacher__New_Design_.Windows
 
         private void name_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (name.Text == "Спортивная секция")
+            if (name.Text == "Мероприятие")
                 name.Text = "";
         }
 
         private void name_LostFocus(object sender, RoutedEventArgs e)
         {
             if (name.Text == "")
-                name.Text = "Спортивная секция";
+                name.Text = "Мероприятие";
         }
 
         private void person_GotFocus(object sender, RoutedEventArgs e)
