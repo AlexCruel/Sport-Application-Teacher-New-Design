@@ -87,6 +87,9 @@
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Teacher.cs" />
+    <Compile Include="Windows\SportSections.xaml.cs">
+      <DependentUpon>SportSections.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Volunteer.xaml.cs">
       <DependentUpon>Volunteer.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\StatisticsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SportSections.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

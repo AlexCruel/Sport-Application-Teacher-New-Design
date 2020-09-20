@@ -50,7 +50,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             teacher.connectStudHours(group, studHoursGrid);
         }
 
-        private void ButtonSheet(object sender, RoutedEventArgs e)
+        private void Button_Sheet(object sender, RoutedEventArgs e)
         {
             string studName = teacher.getStudName(studHoursGrid);
 
@@ -64,7 +64,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             }
         }
 
-        private void ButtonVolunteer(object sender, RoutedEventArgs e)
+        private void Button_Volunteer(object sender, RoutedEventArgs e)
         {
             string studName = teacher.getStudName(studHoursGrid);
 
@@ -78,9 +78,25 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             }
         }
 
-        private void ButtonExit(object sender, RoutedEventArgs e)
+        private void Button_Sections(object sender, RoutedEventArgs e)
+        {
+            string studName = teacher.getStudName(studHoursGrid);
+
+            if (studName == "nope")
+                notifier.ShowWarning("Выберите студента!");
+            else
+            {
+                SportSections sections = new SportSections(studName, groupBox);
+                sections.Show();
+                Close();
+            }
+        }
+
+        private void Button_Exit(object sender, RoutedEventArgs e)
         {
             Close();
         }
+
+        
     }
 }

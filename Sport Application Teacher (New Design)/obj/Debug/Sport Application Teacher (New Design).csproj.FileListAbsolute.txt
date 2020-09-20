@@ -46,3 +46,5 @@ D:\Проекты\Sport App For University\Sport Application Teacher (New Design
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\MainWindow.baml
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\Volunteer.g.cs
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\Volunteer.baml
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportSections.g.cs
+D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportSections.baml

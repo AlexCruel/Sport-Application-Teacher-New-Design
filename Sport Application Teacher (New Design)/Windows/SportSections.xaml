@@ -1,4 +1,4 @@
-﻿<Window x:Class="Sport_Application_Teacher__New_Design_.Windows.Volunteer"
+﻿<Window x:Class="Sport_Application_Teacher__New_Design_.Windows.SportSections"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Windows"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Volunteer" Height="600" Width="1080" WindowStyle="None" ResizeMode="NoResize">
+        Title="SportSections" Height="600" Width="1080" WindowStyle="None" ResizeMode="NoResize">
     <Grid Background="#FFE5E5E5">
         <TextBlock x:Name="studBlock" HorizontalAlignment="Left" Margin="788,11,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="58" Width="239" FontSize="20" FontWeight="Bold" Foreground="#FF544DA5"/>
         <DataGrid x:Name="studHoursGrid" FontSize="22" HorizontalAlignment="Left" Width="735"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="64" Margin="788,89,0,0" TextWrapping="Wrap" Text="Волонтёрская работа" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="name_GotFocus" LostFocus="name_LostFocus"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="64" Margin="788,89,0,0" TextWrapping="Wrap" Text="Спортивная секция" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="name_GotFocus" LostFocus="name_LostFocus"/>
         <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="788,188,0,0" VerticalAlignment="Top" Width="239" Height="64" FontSize="20"/>
         <TextBox x:Name="person" HorizontalAlignment="Left" Height="64" Margin="788,287,0,0" TextWrapping="Wrap" Text="Ответственный" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="person_GotFocus" LostFocus="person_LostFocus"/>
         <Button Content="Записать" Height="40" Margin="788,0,53,86" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe" FontWeight="Bold"/>
