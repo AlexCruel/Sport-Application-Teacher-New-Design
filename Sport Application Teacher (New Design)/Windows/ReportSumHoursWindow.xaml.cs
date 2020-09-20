@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sport_Application_Teacher__New_Design_.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,6 +60,20 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             {
                 ReportStudHoursWindow reportStudHours = new ReportStudHoursWindow(studName, groupBox);
                 reportStudHours.Show();
+                Close();
+            }
+        }
+
+        private void ButtonVolunteer(object sender, RoutedEventArgs e)
+        {
+            string studName = teacher.getStudName(studHoursGrid);
+
+            if (studName == "nope")
+                notifier.ShowWarning("Выберите студента!");
+            else
+            {
+                Volunteer volunteer = new Volunteer(studName, groupBox);
+                volunteer.Show();
                 Close();
             }
         }

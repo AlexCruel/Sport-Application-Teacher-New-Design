@@ -87,6 +87,9 @@
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Teacher.cs" />
+    <Compile Include="Windows\Volunteer.xaml.cs">
+      <DependentUpon>Volunteer.xaml</DependentUpon>
+    </Compile>
     <Page Include="Pages\AnalysisPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,7 +118,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ReportStudHoursWindow.xaml">
+    <Page Include="Windows\ReportStudHoursWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,11 +126,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ReportSumHoursWindow.xaml">
+    <Page Include="Windows\ReportSumHoursWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\StatisticsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Volunteer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,13 +146,13 @@
     <Compile Include="Pages\ReportStudHours.xaml.cs">
       <DependentUpon>ReportStudHours.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ReportStudHoursWindow.xaml.cs">
+    <Compile Include="Windows\ReportStudHoursWindow.xaml.cs">
       <DependentUpon>ReportStudHoursWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ReportSumHours.xaml.cs">
       <DependentUpon>ReportSumHours.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ReportSumHoursWindow.xaml.cs">
+    <Compile Include="Windows\ReportSumHoursWindow.xaml.cs">
       <DependentUpon>ReportSumHoursWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\StatisticsPage.xaml.cs">

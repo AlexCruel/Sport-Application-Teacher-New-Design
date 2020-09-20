@@ -1,0 +1,19 @@
+﻿<Window x:Class="Sport_Application_Teacher__New_Design_.Pages.ReportSumHoursWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Pages"
+        mc:Ignorable="d"
+        Title="ReportSumHoursWindow" Height="600" Width="1080" WindowStyle="None" ResizeMode="NoResize">
+    <Grid Background="#FFE5E5E5">
+        <TextBlock x:Name="groupBlock" HorizontalAlignment="Left" Margin="839,11,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="154" FontSize="36" FontWeight="Bold" Foreground="#FF544DA5"/>
+        <DataGrid x:Name="studHoursGrid" FontSize="22" HorizontalAlignment="Left" Width="735"/>
+        <Button Content="Лист часов" Height="40" Margin="788,110,53,442" Background="#FF544DA5" FontSize="18" FontFamily="Segoe UI" FontWeight="Bold" Click="ButtonSheet"/>
+        <Button Content="Волонтёрская работа" Height="40" Margin="788,0,53,370" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe UI" FontWeight="Bold" Click="ButtonVolunteer"/>
+        <Button Content="Спортивные секции" Height="40" Margin="788,0,53,290" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe UI" FontWeight="Bold"/>
+        <Button Content="Спорт. мероприятия" Height="40" Margin="788,0,53,210" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe UI" FontWeight="Bold"/>
+        <Button Content="Физич. подготовка" Height="40" Margin="788,0,53,130" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe UI" FontWeight="Bold"/>
+        <Button Content="Выход" Height="40" Margin="788,0,53,16" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe UI" FontWeight="Bold" Click="ButtonExit"/>
+    </Grid>
+</Window>
