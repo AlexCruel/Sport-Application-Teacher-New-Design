@@ -9,23 +9,23 @@
       d:DesignHeight="600" d:DesignWidth="1080"
       Title="StatisticsPage">
 
-    <Grid>
-        
-        <Wpf:PieChart x:Name="pieChartGroup" HorizontalAlignment="Center" VerticalAlignment="Center" Height="301" Margin="10,10,471,139" Width="319">
+    <Grid Margin="4,0,-4,0">
+
+        <Wpf:PieChart x:Name="pieChartGroup" HorizontalAlignment="Center" VerticalAlignment="Center" Height="301" Margin="194,85,567,214" Width="319">
             <Wpf:PieChart.Series>
                 <Wpf:PieSeries Title="Объект" Values="100" DataLabels="True"/>
             </Wpf:PieChart.Series>
         </Wpf:PieChart>
-        
+
         <Wpf:PieChart x:Name="pieChartStudent" InnerRadius="100" Height="301" Width="319" Margin="660,85,101,214">
             <Wpf:PieChart.Series>
                 <Wpf:PieSeries Title="Объект" Values="100" DataLabels="True"/>
             </Wpf:PieChart.Series>
         </Wpf:PieChart>
-        
-        <Button Content="Показать" HorizontalAlignment="Left" Margin="261,521,0,0" VerticalAlignment="Top" Width="100" Click="ButtonShowStat" Background="#FF544DA5" FontWeight="Bold"/>
-        <ComboBox x:Name="groupBox" FontSize="20" HorizontalAlignment="Left" Margin="207,439,0,0" VerticalAlignment="Top" Width="217" SelectionChanged="groupBox_SelectionChanged" />
-        
+
+        <Button Content="Показать" HorizontalAlignment="Left" Margin="305,521,0,0" VerticalAlignment="Top" Width="100" Click="ButtonShowStat" Background="#FF544DA5" FontWeight="Bold"/>
+        <ComboBox x:Name="groupBox" FontSize="20" HorizontalAlignment="Left" Margin="251,439,0,0" VerticalAlignment="Top" Width="217" SelectionChanged="groupBox_SelectionChanged" />
+
         <ComboBox x:Name="studBox" FontSize="20" HorizontalAlignment="Left" Margin="660,439,0,0" VerticalAlignment="Top" Width="344"/>
         <Button Content="Показать" HorizontalAlignment="Left" Margin="777,521,0,0" VerticalAlignment="Top" Width="100" Click="ButtonStudStat" Background="#FF544DA5" FontWeight="Bold" />
     </Grid>
