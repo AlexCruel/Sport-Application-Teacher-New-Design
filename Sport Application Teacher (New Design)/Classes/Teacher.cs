@@ -58,7 +58,6 @@ namespace Sport_Application_Teacher__New_Design_
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         public void connectStudHours(ComboBox value, DataGrid studHours)
@@ -72,7 +71,6 @@ namespace Sport_Application_Teacher__New_Design_
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         public Dictionary<string, int> getStat(ComboBox studBox)
@@ -103,19 +101,6 @@ namespace Sport_Application_Teacher__New_Design_
             }
 
             return "nope";
-        }
-
-        public void connectStud(DataGrid studHours, string studName)
-        {
-            try
-            {
-                connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [ФИО_Студ] = '{studName}'", "Student");
-                studHours.ItemsSource = dst.Tables["Student"].DefaultView;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         public void connectStudStat(ComboBox groupBox, ComboBox studBox)

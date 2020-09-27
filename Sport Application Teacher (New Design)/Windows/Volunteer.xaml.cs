@@ -1,4 +1,5 @@
-﻿using Sport_Application_Teacher__New_Design_.Pages;
+﻿using Sport_Application_Teacher__New_Design_.Classes;
+using Sport_Application_Teacher__New_Design_.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace Sport_Application_Teacher__New_Design_.Windows
     /// </summary>
     public partial class Volunteer : Window
     {
+        Student student = new Student();
         ComboBox groupBox = new ComboBox();
 
         public Volunteer(string name, ComboBox group)
@@ -27,6 +29,7 @@ namespace Sport_Application_Teacher__New_Design_.Windows
             InitializeComponent();
             studBlock.Text = name;
             groupBox = group;
+            student.connectVolunteer(studVol, name);
         }
 
         private void name_GotFocus(object sender, RoutedEventArgs e)
@@ -58,6 +61,14 @@ namespace Sport_Application_Teacher__New_Design_.Windows
             ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox);
             reportSumHours.Show();
             Close();
+        }
+
+        private void studVol_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            if (e.PropertyName == "Дата")
+            {
+                (e.Column as DataGridTextColumn).Binding.StringFormat = "dd/MM/yyyy H:mm:ss";
+            }
         }
     }
 }

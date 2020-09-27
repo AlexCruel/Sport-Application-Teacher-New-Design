@@ -80,6 +80,7 @@
     <Compile Include="Classes\Faculty.cs" />
     <Compile Include="Classes\Group.cs" />
     <Compile Include="Classes\Specialty.cs" />
+    <Compile Include="Classes\Student.cs" />
     <Compile Include="Pages\AnalysisPage.xaml.cs">
       <DependentUpon>AnalysisPage.xaml</DependentUpon>
     </Compile>

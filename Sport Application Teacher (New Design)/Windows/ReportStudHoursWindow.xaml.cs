@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sport_Application_Teacher__New_Design_.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     /// </summary>
     public partial class ReportStudHoursWindow : Window
     {
-        Teacher teacher = new Teacher();
+        Student student = new Student();
         ComboBox groupBox = new ComboBox();
 
         public ReportStudHoursWindow(string name, ComboBox group)
@@ -27,7 +28,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             InitializeComponent();
             groupBox = group;
             nameStudBlock.Content = name;
-            teacher.connectStud(studHoursGrid, name);
+            student.connectStudList(studHoursGrid, name);
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)

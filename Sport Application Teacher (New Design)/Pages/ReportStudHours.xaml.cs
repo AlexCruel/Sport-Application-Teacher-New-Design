@@ -30,7 +30,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             frame = (Frame)App.Current.Properties["frame"];
             groupBox = group;
             nameStudBlock.Content = name;
-            teacher.connectStud(studHoursGrid, name);
+            // teacher.connectStud(studHoursGrid, name);
         }
 
         private void ButtonBack(object sender, RoutedEventArgs e)
@@ -42,7 +42,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         {
             if (e.PropertyName == "Дата")
             {
-                (e.Column as DataGridTextColumn).Binding.StringFormat = "dd/MM/yyyy H:mm:ss";
+                (e.Column as DataGridTextColumn).Binding.StringFormat = "dd/MM/yyyy";
             }
         }
     }

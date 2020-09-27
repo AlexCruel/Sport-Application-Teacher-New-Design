@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         Title="Volunteer" Height="600" Width="1080" WindowStyle="None" ResizeMode="NoResize">
     <Grid Background="#FFE5E5E5">
+        <DataGrid x:Name="studVol" FontSize="18" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="735" AutoGeneratingColumn="studVol_AutoGeneratingColumn"/>
         <TextBlock x:Name="studBlock" HorizontalAlignment="Left" Margin="788,11,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="58" Width="239" FontSize="20" FontWeight="Bold" Foreground="#FF544DA5"/>
-        <DataGrid x:Name="studHoursGrid" FontSize="22" HorizontalAlignment="Left" Width="735"/>
         <TextBox x:Name="name" HorizontalAlignment="Left" Height="64" Margin="788,89,0,0" TextWrapping="Wrap" Text="Волонтёрская работа" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="name_GotFocus" LostFocus="name_LostFocus"/>
         <DatePicker SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="788,188,0,0" VerticalAlignment="Top" Width="239" Height="64" FontSize="20"/>
         <TextBox x:Name="person" HorizontalAlignment="Left" Height="64" Margin="788,287,0,0" TextWrapping="Wrap" Text="Ответственный" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="person_GotFocus" LostFocus="person_LostFocus"/>
