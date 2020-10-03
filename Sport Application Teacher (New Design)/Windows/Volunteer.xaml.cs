@@ -24,12 +24,12 @@ namespace Sport_Application_Teacher__New_Design_.Windows
         Student student = new Student();
         ComboBox groupBox = new ComboBox();
 
-        public Volunteer(string name, ComboBox group)
+        public Volunteer(string number, string name, ComboBox group)
         {
             InitializeComponent();
             studBlock.Text = name;
             groupBox = group;
-            student.connectVolunteer(studVol, name);
+            student.connectVolunteer(studVol, number);
         }
 
         private void name_GotFocus(object sender, RoutedEventArgs e)

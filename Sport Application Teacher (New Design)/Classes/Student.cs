@@ -50,11 +50,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectVolunteer(DataGrid studVol, string studName) 
+        public void connectVolunteer(DataGrid studVol, string studNumber) 
         {
             try
             {
-                connect($"SELECT [Название], [Дата], [Ответственный] FROM [Volunteer] WHERE [ФИО_Студ] = '{studName}'", "Volunteer");
+                connect($"SELECT [Название], [Дата], [Ответственный] FROM [Volunteer] WHERE [СтудНомер] = '{studNumber}'", "Volunteer");
                 studVol.ItemsSource = dst.Tables["Volunteer"].DefaultView;
             }
             catch (SqlException ex)

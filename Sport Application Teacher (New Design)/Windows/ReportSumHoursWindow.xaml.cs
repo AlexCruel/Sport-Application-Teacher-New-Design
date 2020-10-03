@@ -68,12 +68,13 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         private void Button_Volunteer(object sender, RoutedEventArgs e)
         {
             string studName = teacher.getStudName(studHoursGrid);
+            string studNumber = teacher.getStudNumber(studHoursGrid);
 
-            if (studName == "nope")
+            if (studNumber == "nope")
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                Volunteer volunteer = new Volunteer(studName, groupBox);
+                Volunteer volunteer = new Volunteer(studNumber, studName, groupBox);
                 volunteer.Show();
                 Close();
             }
