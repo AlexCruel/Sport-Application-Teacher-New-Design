@@ -23,12 +23,14 @@ namespace Sport_Application_Teacher__New_Design_.Windows
     {
         Student student = new Student();
         ComboBox groupBox = new ComboBox();
+        string number;
 
         public Volunteer(string number, string name, ComboBox group)
         {
             InitializeComponent();
             studBlock.Text = name;
             groupBox = group;
+            this.number = number;
             student.connectVolunteer(studVol, number);
         }
 
@@ -69,6 +71,17 @@ namespace Sport_Application_Teacher__New_Design_.Windows
             {
                 (e.Column as DataGridTextColumn).Binding.StringFormat = "dd/MM/yyyy H:mm:ss";
             }
+        }
+
+        private void Button_Record(object sender, RoutedEventArgs e)
+        {
+            if (name.Text != "Волонтёрская работа" && person.Text != "Ответственный")
+            {
+                student.insertVolunteer(studVol, name, date, person);
+                student.connectVolunteer(studVol, number);
+            }
+            else
+                MessageBox.Show("Введите данные корректно!");
         }
     }
 }

@@ -63,16 +63,19 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        //public void insertVolunteer(DataGrid studVol, TextBox vol, DatePicker date, TextBox name) 
-        //{
-        //    try
-        //    {
-        //        connect($"INSERT INTO [Волонтерство] VALUES ({vol}, {date}, {name})", "Volunteer");
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
+        public void insertVolunteer(DataGrid studVol, TextBox name, DatePicker date, TextBox person)
+        {
+            try
+            {
+                connect($"INSERT INTO [Волонтерство] VALUES ('17Д28-157', '{name.Text}', '{date}', '{person.Text}')", "Volunteer");
+                name.Text = "Волонтёрская работа";
+                date.SelectedDate = DateTime.Now;
+                person.Text = "Ответственный";
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
