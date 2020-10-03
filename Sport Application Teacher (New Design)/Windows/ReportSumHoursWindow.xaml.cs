@@ -53,12 +53,13 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         private void Button_Sheet(object sender, RoutedEventArgs e)
         {
             string studName = teacher.getStudName(studHoursGrid);
+            string studNumber = teacher.getStudNumber(studHoursGrid);
 
-            if (studName == "nope")
+            if (studNumber == "nope")
                 notifier.ShowWarning("Выберите студента!");
-            else 
+            else
             {
-                ReportStudHoursWindow reportStudHours = new ReportStudHoursWindow(studName, groupBox);
+                ReportStudHoursWindow reportStudHours = new ReportStudHoursWindow(studNumber, studName, groupBox);
                 reportStudHours.Show();
                 Close();
             }

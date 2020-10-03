@@ -92,8 +92,30 @@ namespace Sport_Application_Teacher__New_Design_
             return dict;
         }
 
-        public string getStudName(DataGrid studHours)
+        public string getStudNumber(DataGrid studHours)
         {   
+            if (studHours.SelectedItem != null)
+            {
+                TextBlock value = (TextBlock)studHours.Columns[0].GetCellContent(studHours.SelectedItem);
+
+                try
+                {
+                    connect($"SELECT [СтудНомер] FROM [Студенты] WHERE [ФИО_Студ] = '{value.Text}'", "studNumber");
+                    value.Text = dst.Tables["studNumber"].Rows[0][0].ToString();
+                    return value.Text;
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return "nope";
+        }
+
+        public string getStudName(DataGrid studHours)
+        {
+
             if (studHours.SelectedItem != null)
             {
                 TextBlock value = (TextBlock)studHours.Columns[0].GetCellContent(studHours.SelectedItem);

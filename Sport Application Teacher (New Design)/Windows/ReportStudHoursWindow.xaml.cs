@@ -23,12 +23,12 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         Student student = new Student();
         ComboBox groupBox = new ComboBox();
 
-        public ReportStudHoursWindow(string name, ComboBox group)
+        public ReportStudHoursWindow(string number, string name, ComboBox group)
         {
             InitializeComponent();
             groupBox = group;
             nameStudBlock.Content = name;
-            student.connectStudList(studHoursGrid, name);
+            student.connectStudList(studHoursGrid, number);
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)
