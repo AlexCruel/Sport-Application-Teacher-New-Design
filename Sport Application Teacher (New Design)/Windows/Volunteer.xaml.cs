@@ -31,7 +31,7 @@ namespace Sport_Application_Teacher__New_Design_.Windows
             studBlock.Text = name;
             groupBox = group;
             this.number = number;
-            student.connectVolunteer(studVol, number);
+            student.connectVolunteer(studHoursGrid, number);
         }
 
         private void name_GotFocus(object sender, RoutedEventArgs e)
@@ -77,8 +77,8 @@ namespace Sport_Application_Teacher__New_Design_.Windows
         {
             if (name.Text != "Волонтёрская работа" && person.Text != "Ответственный")
             {
-                student.insertVolunteer(studVol, name, date, person);
-                student.connectVolunteer(studVol, number);
+                student.insertVolunteer(name, date, person);
+                student.connectVolunteer(studHoursGrid, number);
             }
             else
                 MessageBox.Show("Введите данные корректно!");

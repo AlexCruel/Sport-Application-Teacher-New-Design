@@ -83,12 +83,13 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         private void Button_Sections(object sender, RoutedEventArgs e)
         {
             string studName = teacher.getStudName(studHoursGrid);
+            string studNumber = teacher.getStudNumber(studHoursGrid);
 
-            if (studName == "nope")
+            if (studNumber == "nope")
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                SportSections sections = new SportSections(studName, groupBox);
+                SportSections sections = new SportSections(studNumber, studName, groupBox);
                 sections.Show();
                 Close();
             }

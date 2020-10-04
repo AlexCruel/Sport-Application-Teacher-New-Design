@@ -50,12 +50,12 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectVolunteer(DataGrid studVol, string studNumber) 
+        public void connectVolunteer(DataGrid studHoursGrid, string studNumber) 
         {
             try
             {
                 connect($"SELECT [Название], [Дата], [Ответственный] FROM [Volunteer] WHERE [СтудНомер] = '{studNumber}'", "Volunteer");
-                studVol.ItemsSource = dst.Tables["Volunteer"].DefaultView;
+                studHoursGrid.ItemsSource = dst.Tables["Volunteer"].DefaultView;
             }
             catch (SqlException ex)
             {
@@ -63,7 +63,7 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void insertVolunteer(DataGrid studVol, TextBox name, DatePicker date, TextBox person)
+        public void insertVolunteer(TextBox name, DatePicker date, TextBox person)
         {
             try
             {
@@ -71,6 +71,19 @@ namespace Sport_Application_Teacher__New_Design_.Classes
                 name.Text = "Волонтёрская работа";
                 date.SelectedDate = DateTime.Now;
                 person.Text = "Ответственный";
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void connectSections(DataGrid studHoursGrid, string studNumber)
+        {
+            try
+            {
+                connect($"SELECT [Название], [Дата], [Ответственный] FROM [SportSections] WHERE [СтудНомер] = '{studNumber}'", "SportSections");
+                studHoursGrid.ItemsSource = dst.Tables["SportSections"].DefaultView;
             }
             catch (SqlException ex)
             {
