@@ -63,11 +63,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void insertVolunteer(TextBox name, DatePicker date, TextBox person)
+        public void insertVolunteer(string number, TextBox name, DatePicker date, TextBox person)
         {
             try
             {
-                connect($"INSERT INTO [Волонтерство] VALUES ('17Д28-157', '{name.Text}', '{date}', '{person.Text}')", "Volunteer");
+                connect($"INSERT INTO [Волонтерство] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}')", "Volunteer");
                 name.Text = "Волонтёрская работа";
                 date.SelectedDate = DateTime.Now;
                 person.Text = "Ответственный";
@@ -91,11 +91,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void insertSections(TextBox name, DatePicker date, TextBox person)
+        public void insertSections(string number, TextBox name, DatePicker date, TextBox person)
         {
             try
             {
-                connect($"INSERT INTO [Секции] VALUES ('17Д28-157', '{name.Text}', '{date}', '{person.Text}')", "SportSections");
+                connect($"INSERT INTO [Секции] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}')", "SportSections");
                 name.Text = "Спортивная секция";
                 date.SelectedDate = DateTime.Now;
                 person.Text = "Ответственный";

@@ -62,7 +62,7 @@ namespace Sport_Application_Teacher__New_Design_.Windows
         {
             if (name.Text != "Спортивная секция" && person.Text != "Ответственный")
             {
-                student.insertSections(name, date, person);
+                student.insertSections(number, name, date, person);
                 student.connectSections(studHoursGrid, number);
             }
             else

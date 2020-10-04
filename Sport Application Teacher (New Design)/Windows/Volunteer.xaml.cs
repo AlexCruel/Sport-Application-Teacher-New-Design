@@ -62,7 +62,7 @@ namespace Sport_Application_Teacher__New_Design_.Windows
         {
             if (name.Text != "Волонтёрская работа" && person.Text != "Ответственный")
             {
-                student.insertVolunteer(name, date, person);
+                student.insertVolunteer(number, name, date, person);
                 student.connectVolunteer(studHoursGrid, number);
             }
             else
