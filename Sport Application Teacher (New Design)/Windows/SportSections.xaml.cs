@@ -23,12 +23,14 @@ namespace Sport_Application_Teacher__New_Design_.Windows
     {
         Student student = new Student();
         ComboBox groupBox = new ComboBox();
+        string number;
 
         public SportSections(string number, string name, ComboBox group)
         {
             InitializeComponent();
             studBlock.Text = name;
             groupBox = group;
+            this.number = number;
             student.connectSections(studHoursGrid, number);
         }
 
@@ -54,6 +56,17 @@ namespace Sport_Application_Teacher__New_Design_.Windows
         {
             if (person.Text == "")
                 person.Text = "Ответственный";
+        }
+
+        private void Button_Record(object sender, RoutedEventArgs e)
+        {
+            if (name.Text != "Спортивная секция" && person.Text != "Ответственный")
+            {
+                student.insertSections(name, date, person);
+                student.connectSections(studHoursGrid, number);
+            }
+            else
+                MessageBox.Show("Введите данные корректно!");
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)

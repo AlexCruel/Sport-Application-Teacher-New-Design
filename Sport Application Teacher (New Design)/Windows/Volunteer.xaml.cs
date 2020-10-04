@@ -58,6 +58,17 @@ namespace Sport_Application_Teacher__New_Design_.Windows
                 person.Text = "Ответственный";
         }
 
+        private void Button_Record(object sender, RoutedEventArgs e)
+        {
+            if (name.Text != "Волонтёрская работа" && person.Text != "Ответственный")
+            {
+                student.insertVolunteer(name, date, person);
+                student.connectVolunteer(studHoursGrid, number);
+            }
+            else
+                MessageBox.Show("Введите данные корректно!");
+        }
+
         private void Button_Back(object sender, RoutedEventArgs e)
         {
             ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox);
@@ -71,17 +82,6 @@ namespace Sport_Application_Teacher__New_Design_.Windows
             {
                 (e.Column as DataGridTextColumn).Binding.StringFormat = "dd/MM/yyyy H:mm:ss";
             }
-        }
-
-        private void Button_Record(object sender, RoutedEventArgs e)
-        {
-            if (name.Text != "Волонтёрская работа" && person.Text != "Ответственный")
-            {
-                student.insertVolunteer(name, date, person);
-                student.connectVolunteer(studHoursGrid, number);
-            }
-            else
-                MessageBox.Show("Введите данные корректно!");
         }
     }
 }

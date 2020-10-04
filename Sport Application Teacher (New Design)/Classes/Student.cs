@@ -90,5 +90,20 @@ namespace Sport_Application_Teacher__New_Design_.Classes
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void insertSections(TextBox name, DatePicker date, TextBox person)
+        {
+            try
+            {
+                connect($"INSERT INTO [Секции] VALUES ('17Д28-157', '{name.Text}', '{date}', '{person.Text}')", "SportSections");
+                name.Text = "Спортивная секция";
+                date.SelectedDate = DateTime.Now;
+                person.Text = "Ответственный";
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
