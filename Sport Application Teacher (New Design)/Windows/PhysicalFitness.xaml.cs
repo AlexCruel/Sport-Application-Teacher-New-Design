@@ -1,4 +1,5 @@
-﻿using Sport_Application_Teacher__New_Design_.Pages;
+﻿using Sport_Application_Teacher__New_Design_.Classes;
+using Sport_Application_Teacher__New_Design_.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,13 +21,17 @@ namespace Sport_Application_Teacher__New_Design_.Windows
     /// </summary>
     public partial class PhysicalFitness : Window
     {
+        Student student = new Student();
         ComboBox groupBox = new ComboBox();
+        string number;
 
-        public PhysicalFitness(string name, ComboBox group)
+        public PhysicalFitness(string number, string name, ComboBox group)
         {
             InitializeComponent();
             studBlock.Text = name;
             groupBox = group;
+            this.number = number;
+            student.connectFitness(studHoursGrid, number);
         }
 
         private void result_GotFocus(object sender, RoutedEventArgs e)

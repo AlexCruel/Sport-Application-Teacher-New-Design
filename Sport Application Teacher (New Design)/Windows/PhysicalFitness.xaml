@@ -33,7 +33,7 @@
         <TextBlock x:Name="studBlock" HorizontalAlignment="Left" Margin="788,11,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="58" Width="239" FontSize="20" FontWeight="Bold" Foreground="#FF544DA5"/>
         <DataGrid x:Name="studHoursGrid" FontSize="22" HorizontalAlignment="Left" Width="735"/>
         <TextBox x:Name="result" HorizontalAlignment="Left" Height="64" Margin="788,285,0,0" TextWrapping="Wrap" Text="Результат" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="result_GotFocus" LostFocus="result_LostFocus"/>
-        <TextBox x:Name="mark" HorizontalAlignment="Left" Height="64" Margin="788,374,0,0" TextWrapping="Wrap" Text="Оценка" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="mark_GotFocus" LostFocus="mark_LostFocus"/>
+        <TextBox x:Name="mark" HorizontalAlignment="Left" Height="64" Margin="788,374,0,0" TextWrapping="Wrap" Text="Отметка" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="mark_GotFocus" LostFocus="mark_LostFocus"/>
         <Button Content="Записать" Height="40" Margin="788,0,53,86" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe" FontWeight="Bold"/>
         <Button Content="Назад" Height="40" Margin="788,0,53,16" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe" FontWeight="Bold" Click="Button_Back"/>
     </Grid>

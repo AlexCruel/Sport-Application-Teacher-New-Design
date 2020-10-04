@@ -133,5 +133,33 @@ namespace Sport_Application_Teacher__New_Design_.Classes
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void connectFitness(DataGrid studHoursGrid, string studNumber)
+        {
+            try
+            {
+                connect($"SELECT [Семестр], [Дисциплина], [Результат], [Отметка] FROM [Fitness] WHERE [СтудНомер] = '{studNumber}'", "Fitness");
+                studHoursGrid.ItemsSource = dst.Tables["Fitness"].DefaultView;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void insertFitness(string number, TextBox name, DatePicker date, TextBox person)
+        {
+            try
+            {
+                connect($"INSERT INTO [Физическая подготовка] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}')", "Fitness");
+                name.Text = "Спортивная секция";
+                date.SelectedDate = DateTime.Now;
+                person.Text = "Ответственный";
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

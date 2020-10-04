@@ -113,12 +113,13 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         private void Button_Fitness(object sender, RoutedEventArgs e)
         {
             string studName = teacher.getStudName(studHoursGrid);
+            string studNumber = teacher.getStudNumber(studHoursGrid);
 
-            if (studName == "nope")
+            if (studNumber == "nope")
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                PhysicalFitness fitness = new PhysicalFitness(studName, groupBox);
+                PhysicalFitness fitness = new PhysicalFitness(studNumber, studName, groupBox);
                 fitness.Show();
                 Close();
             }
