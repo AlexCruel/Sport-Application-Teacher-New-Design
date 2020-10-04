@@ -147,14 +147,13 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void insertFitness(string number, TextBox name, DatePicker date, TextBox person)
+        public void insertFitness(string number, ComboBox semester, ComboBox discipline, TextBox result, TextBox mark)
         {
             try
             {
-                connect($"INSERT INTO [Физическая подготовка] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}')", "Fitness");
-                name.Text = "Спортивная секция";
-                date.SelectedDate = DateTime.Now;
-                person.Text = "Ответственный";
+                connect($"INSERT INTO [Физическая подготовка] VALUES ('{number}', '{semester.Text}', '{discipline.Text}', '{result.Text}', '{mark.Text}')", "Fitness");
+                result.Text = "Результат";
+                mark.Text = "Отметка";
             }
             catch (SqlException ex)
             {

@@ -48,14 +48,25 @@ namespace Sport_Application_Teacher__New_Design_.Windows
 
         private void mark_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (mark.Text == "Оценка")
+            if (mark.Text == "Отметка")
                 mark.Text = "";
         }
 
         private void mark_LostFocus(object sender, RoutedEventArgs e)
         {
             if (mark.Text == "")
-                mark.Text = "Оценка";
+                mark.Text = "Отметка";
+        }
+
+        private void Button_Record(object sender, RoutedEventArgs e)
+        {
+            if (semester.Text != "" && discipline.Text != "" && result.Text != "Результат" && mark.Text != "Отметка")
+            {
+                student.insertFitness(number, semester, discipline, result, mark);
+                student.connectFitness(studHoursGrid, number);
+            }
+            else
+                MessageBox.Show("Введите данные корректно!");
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)
