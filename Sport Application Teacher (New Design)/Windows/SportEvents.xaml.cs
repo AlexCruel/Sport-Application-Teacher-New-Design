@@ -1,4 +1,5 @@
-﻿using Sport_Application_Teacher__New_Design_.Pages;
+﻿using Sport_Application_Teacher__New_Design_.Classes;
+using Sport_Application_Teacher__New_Design_.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,13 +21,17 @@ namespace Sport_Application_Teacher__New_Design_.Windows
     /// </summary>
     public partial class SportEvents : Window
     {
+        Student student = new Student();
         ComboBox groupBox = new ComboBox();
+        string number;
 
-        public SportEvents(string name, ComboBox group)
+        public SportEvents(string number, string name, ComboBox group)
         {
             InitializeComponent();
             studBlock.Text = name;
             groupBox = group;
+            this.number = number;
+            student.connectEvents(studHoursGrid, number);
         }
 
         private void name_GotFocus(object sender, RoutedEventArgs e)
@@ -51,6 +56,17 @@ namespace Sport_Application_Teacher__New_Design_.Windows
         {
             if (person.Text == "")
                 person.Text = "Ответственный";
+        }
+
+        private void Button_Record(object sender, RoutedEventArgs e)
+        {
+            if (name.Text != "Мероприятие" && person.Text != "Ответственный")
+            {
+                student.insertEvents(number, name, date, person);
+                student.connectEvents(studHoursGrid, number);
+            }
+            else
+                MessageBox.Show("Введите данные корректно!");
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)

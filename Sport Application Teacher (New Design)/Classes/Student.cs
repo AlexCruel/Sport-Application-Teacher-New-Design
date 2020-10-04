@@ -105,5 +105,33 @@ namespace Sport_Application_Teacher__New_Design_.Classes
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void connectEvents(DataGrid studHoursGrid, string studNumber)
+        {
+            try
+            {
+                connect($"SELECT [Название], [Дата], [Ответственный] FROM [Events] WHERE [СтудНомер] = '{studNumber}'", "Events");
+                studHoursGrid.ItemsSource = dst.Tables["Events"].DefaultView;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void insertEvents(string number, TextBox name, DatePicker date, TextBox person)
+        {
+            try
+            {
+                connect($"INSERT INTO [Мероприятия] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}')", "Events");
+                name.Text = "Спортивная секция";
+                date.SelectedDate = DateTime.Now;
+                person.Text = "Ответственный";
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
