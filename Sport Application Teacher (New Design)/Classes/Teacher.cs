@@ -64,7 +64,7 @@ namespace Sport_Application_Teacher__New_Design_
         {
             try
             {
-                connect($"SELECT [ФИО Студента], [Всего отработано часов] FROM [Sum_HoursFull] WHERE [Группа] = '{value.Text}'", "Hours");
+                connect($"SELECT [Студенческий номер], [ФИО Студента], [Всего отработано часов] FROM [Sum_HoursFull] WHERE [Группа] = '{value.Text}'", "Hours");
                 studHours.ItemsSource = dst.Tables["Hours"].DefaultView;
             }
             catch (SqlException ex)
@@ -97,17 +97,7 @@ namespace Sport_Application_Teacher__New_Design_
             if (studHours.SelectedItem != null)
             {
                 TextBlock value = (TextBlock)studHours.Columns[0].GetCellContent(studHours.SelectedItem);
-
-                try
-                {
-                    connect($"SELECT [СтудНомер] FROM [Студенты] WHERE [ФИО_Студ] = '{value.Text}'", "studNumber");
-                    value.Text = dst.Tables["studNumber"].Rows[0][0].ToString();
-                    return value.Text;
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                return value.Text;
             }
 
             return "nope";
@@ -118,7 +108,7 @@ namespace Sport_Application_Teacher__New_Design_
 
             if (studHours.SelectedItem != null)
             {
-                TextBlock value = (TextBlock)studHours.Columns[0].GetCellContent(studHours.SelectedItem);
+                TextBlock value = (TextBlock)studHours.Columns[1].GetCellContent(studHours.SelectedItem);
                 return value.Text;
             }
 

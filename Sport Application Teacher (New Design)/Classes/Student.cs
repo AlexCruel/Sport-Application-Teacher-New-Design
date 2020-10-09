@@ -37,11 +37,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectStudList(DataGrid studHours, string studName)
+        public void connectStudList(DataGrid studHours, string studNumber)
         {
             try
             {
-                connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [СтудНомер] = '{studName}'", "Student");
+                connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [СтудНомер] = '{studNumber}'", "Student");
                 studHours.ItemsSource = dst.Tables["Student"].DefaultView;
             }
             catch (SqlException ex)
