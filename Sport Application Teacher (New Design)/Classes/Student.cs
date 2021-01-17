@@ -16,7 +16,7 @@ namespace Sport_Application_Teacher__New_Design_.Classes
         SqlDataAdapter adapter;
         string connectionString = @"Data Source=(local)\SQLEXPRESS;" +
                             "Integrated Security = SSPI;" +
-                            "Initial Catalog = Sport1";
+                            "Initial Catalog = sportapp1";
 
         public Student() 
         {
@@ -54,7 +54,7 @@ namespace Sport_Application_Teacher__New_Design_.Classes
         {
             try
             {
-                connect($"SELECT [Название], [Дата], [Ответственный] FROM [Volunteer] WHERE [СтудНомер] = '{studNumber}'", "Volunteer");
+                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [Volunteer] WHERE [СтудНомер] = '{studNumber}'", "Volunteer");
                 studHoursGrid.ItemsSource = dst.Tables["Volunteer"].DefaultView;
             }
             catch (SqlException ex)
@@ -63,11 +63,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void insertVolunteer(string number, TextBox name, DatePicker date, TextBox person)
+        public void insertVolunteer(string number, TextBox name, DatePicker date, TextBox person, ComboBox hours)
         {
             try
             {
-                connect($"INSERT INTO [Волонтерство] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}')", "Volunteer");
+                connect($"INSERT INTO [Волонтерство] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}', '{hours.Text}')", "Volunteer");
                 name.Text = "Волонтёрская работа";
                 date.SelectedDate = DateTime.Now;
                 person.Text = "Ответственный";

@@ -60,9 +60,9 @@ namespace Sport_Application_Teacher__New_Design_.Windows
 
         private void Button_Record(object sender, RoutedEventArgs e)
         {
-            if (name.Text != "Волонтёрская работа" && person.Text != "Ответственный")
+            if (name.Text != "Волонтёрская работа" && person.Text != "Ответственный" && hours.Text != "")
             {
-                student.insertVolunteer(number, name, date, person);
+                student.insertVolunteer(number, name, date, person, hours);
                 student.connectVolunteer(studHoursGrid, number);
             }
             else

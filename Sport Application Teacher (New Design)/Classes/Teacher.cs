@@ -19,7 +19,7 @@ namespace Sport_Application_Teacher__New_Design_
         SqlDataAdapter adapter;
         string connectionString = @"Data Source=(local)\SQLEXPRESS;" +
                             "Integrated Security = SSPI;" +
-                            "Initial Catalog = Sport1";
+                            "Initial Catalog = sportapp1";
 
         public DataSet Dst
         {
