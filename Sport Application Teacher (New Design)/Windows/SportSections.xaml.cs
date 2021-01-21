@@ -60,9 +60,9 @@ namespace Sport_Application_Teacher__New_Design_.Windows
 
         private void Button_Record(object sender, RoutedEventArgs e)
         {
-            if (name.Text != "Спортивная секция" && person.Text != "Ответственный")
+            if (name.Text != "Спортивная секция" && person.Text != "Ответственный" && hours.Text != "")
             {
-                student.insertSections(number, name, date, person);
+                student.insertSections(number, name, date, person, hours);
                 student.connectSections(studHoursGrid, number);
             }
             else

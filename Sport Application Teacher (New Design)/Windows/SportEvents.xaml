@@ -10,10 +10,18 @@
     <Grid Background="#FFE5E5E5">
         <TextBlock x:Name="studBlock" HorizontalAlignment="Left" Margin="788,11,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="58" Width="239" FontSize="20" FontWeight="Bold" Foreground="#FF544DA5"/>
         <DataGrid x:Name="studHoursGrid" FontSize="22" HorizontalAlignment="Left" Width="735"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="64" Margin="788,89,0,0" TextWrapping="Wrap" Text="Мероприятие" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="name_GotFocus" LostFocus="name_LostFocus"/>
-        <DatePicker x:Name="date" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="788,188,0,0" VerticalAlignment="Top" Width="239" Height="64" FontSize="20"/>
-        <TextBox x:Name="person" HorizontalAlignment="Left" Height="64" Margin="788,287,0,0" TextWrapping="Wrap" Text="Ответственный" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="person_GotFocus" LostFocus="person_LostFocus"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="64" Margin="788,95,0,0" TextWrapping="Wrap" Text="Мероприятие" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="name_GotFocus" LostFocus="name_LostFocus"/>
+        <DatePicker x:Name="date" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="788,181,0,0" VerticalAlignment="Top" Width="239" Height="64" FontSize="20"/>
+        <TextBox x:Name="person" HorizontalAlignment="Left" Height="64" Margin="788,275,0,0" TextWrapping="Wrap" Text="Ответственный" VerticalAlignment="Top" Width="239" FontSize="20" GotFocus="person_GotFocus" LostFocus="person_LostFocus"/>
         <Button Content="Записать" Height="40" Margin="788,0,53,86" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe" FontWeight="Bold" Click="Button_Record"/>
         <Button Content="Назад" Height="40" Margin="788,0,53,16" VerticalAlignment="Bottom" Background="#FF544DA5" FontSize="18" FontFamily="Segoe" FontWeight="Bold" Click="Button_Back"/>
+        <TextBlock FontSize="20" Foreground="Black" HorizontalAlignment="Left" Margin="788,367,0,0" TextWrapping="Wrap" Text="Часы" VerticalAlignment="Top"/>
+        <ComboBox x:Name="hours" FontSize="20" HorizontalAlignment="Left" Margin="788,383,0,0" VerticalAlignment="Top" Width="239" Height="40">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+        </ComboBox>
     </Grid>
 </Window>

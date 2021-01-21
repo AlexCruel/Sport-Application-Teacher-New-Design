@@ -82,7 +82,7 @@ namespace Sport_Application_Teacher__New_Design_.Classes
         {
             try
             {
-                connect($"SELECT [Название], [Дата], [Ответственный] FROM [SportSections] WHERE [СтудНомер] = '{studNumber}'", "SportSections");
+                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [SportSections] WHERE [СтудНомер] = '{studNumber}'", "SportSections");
                 studHoursGrid.ItemsSource = dst.Tables["SportSections"].DefaultView;
             }
             catch (SqlException ex)
@@ -91,11 +91,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void insertSections(string number, TextBox name, DatePicker date, TextBox person)
+        public void insertSections(string number, TextBox name, DatePicker date, TextBox person, ComboBox hours)
         {
             try
             {
-                connect($"INSERT INTO [Секции] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}')", "SportSections");
+                connect($"INSERT INTO [Секции] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}', '{hours.Text}')", "SportSections");
                 name.Text = "Спортивная секция";
                 date.SelectedDate = DateTime.Now;
                 person.Text = "Ответственный";
@@ -110,7 +110,7 @@ namespace Sport_Application_Teacher__New_Design_.Classes
         {
             try
             {
-                connect($"SELECT [Название], [Дата], [Ответственный] FROM [Events] WHERE [СтудНомер] = '{studNumber}'", "Events");
+                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [Events] WHERE [СтудНомер] = '{studNumber}'", "Events");
                 studHoursGrid.ItemsSource = dst.Tables["Events"].DefaultView;
             }
             catch (SqlException ex)
@@ -119,11 +119,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void insertEvents(string number, TextBox name, DatePicker date, TextBox person)
+        public void insertEvents(string number, TextBox name, DatePicker date, TextBox person, ComboBox hours)
         {
             try
             {
-                connect($"INSERT INTO [Мероприятия] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}')", "Events");
+                connect($"INSERT INTO [Мероприятия] VALUES ('{number}', '{name.Text}', '{date}', '{person.Text}', '{hours.Text}')", "Events");
                 name.Text = "Спортивная секция";
                 date.SelectedDate = DateTime.Now;
                 person.Text = "Ответственный";
