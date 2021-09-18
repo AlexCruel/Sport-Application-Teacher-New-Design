@@ -27,7 +27,6 @@ namespace Sport_Application_Teacher__New_Design_.Admin
         private void btnFaculty_Click(object sender, RoutedEventArgs e)
         {
             new AdminFacultyWindow().Show();
-            // this.Hide();
         }
     }
 }

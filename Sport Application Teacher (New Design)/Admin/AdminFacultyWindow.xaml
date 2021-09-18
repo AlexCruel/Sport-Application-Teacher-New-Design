@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="AdminFacultyWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="314" Margin="26,24,0,0" VerticalAlignment="Top" Width="445"/>
-        <Button Content="Добавить" HorizontalAlignment="Left" Margin="571,360,0,0" VerticalAlignment="Top" Width="169"/>
-        <Button Content="Удалить" HorizontalAlignment="Left" Margin="302,360,0,0" VerticalAlignment="Top" Width="169"/>
+        <DataGrid x:Name="dataFaculty" HorizontalAlignment="Left" Height="314" Margin="26,24,0,0" VerticalAlignment="Top" Width="445"/>
+        <Button x:Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="571,360,0,0" VerticalAlignment="Top" Width="169" Click="btnAdd_Click"/>
         <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Left" Margin="26,360,0,0" VerticalAlignment="Top" Width="169" Click="btnBack_Click"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="571,182,0,0" TextWrapping="Wrap" Text="Наименование факультета" VerticalAlignment="Top" Width="169" GotFocus="name_GotFocus" LostFocus="name_LostFocus"/>
 
     </Grid>
 </Window>
