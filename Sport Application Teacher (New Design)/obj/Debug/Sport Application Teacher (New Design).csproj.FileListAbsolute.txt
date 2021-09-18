@@ -52,3 +52,115 @@ D:\Проекты\Sport App For University\Sport Application Teacher (New Design
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportEvents.baml
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\PhysicalFitness.g.cs
 D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\PhysicalFitness.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\Sport Application Teacher (New Design).exe.config
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\Sport Application Teacher (New Design).exe
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\Sport Application Teacher (New Design).pdb
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.dll
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.Wpf.dll
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignColors.dll
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\ToastNotifications.dll
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\ToastNotifications.Messages.dll
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.pdb
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.xml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.Wpf.pdb
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.Wpf.xml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignColors.pdb
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).csprojAssemblyReference.cache
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\AnalysisPage.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\AuthPage.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\MainWindow.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\HomePage.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\ReportStudHours.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\PhysicalFitness.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\ReportStudHoursWindow.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\ReportSumHours.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\ReportSumHoursWindow.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\StatisticsPage.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportEvents.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportSections.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\Volunteer.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\App.g.cs
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design)_MarkupCompile.cache
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design)_MarkupCompile.lref
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\App.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\AnalysisPage.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\AuthPage.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\MainWindow.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\HomePage.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\ReportStudHours.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\PhysicalFitness.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\ReportStudHoursWindow.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\ReportSumHours.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\ReportSumHoursWindow.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\StatisticsPage.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportEvents.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportSections.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\Volunteer.baml
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).g.resources
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport_Application_Teacher__New_Design_.Properties.Resources.resources
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).csproj.GenerateResource.cache
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).csproj.CoreCompileInputs.cache
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).csproj.CopyComplete
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).exe
+E:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).pdb
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\Sport Application Teacher (New Design).exe.config
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\Sport Application Teacher (New Design).exe
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\Sport Application Teacher (New Design).pdb
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.dll
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.Wpf.dll
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignColors.dll
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\ToastNotifications.dll
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\ToastNotifications.Messages.dll
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.pdb
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.xml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.Wpf.pdb
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\LiveCharts.Wpf.xml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignColors.pdb
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\AnalysisPage.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\AuthPage.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\MainWindow.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\HomePage.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\ReportStudHours.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\PhysicalFitness.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\ReportStudHoursWindow.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\ReportSumHours.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\ReportSumHoursWindow.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\StatisticsPage.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportEvents.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportSections.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\Volunteer.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\App.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design)_MarkupCompile.cache
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design)_MarkupCompile.lref
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\App.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\AnalysisPage.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\AuthPage.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\MainWindow.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\HomePage.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\ReportStudHours.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\PhysicalFitness.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\ReportStudHoursWindow.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\ReportSumHours.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\ReportSumHoursWindow.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Pages\StatisticsPage.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportEvents.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\SportSections.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Windows\Volunteer.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).g.resources
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport_Application_Teacher__New_Design_.Properties.Resources.resources
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).csproj.GenerateResource.cache
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).csproj.CoreCompileInputs.cache
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).csproj.CopyComplete
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).exe
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).pdb
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).csproj.AssemblyReference.cache
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminPanel.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminPanel.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminFacultyWindow.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminFacultyWindow.baml

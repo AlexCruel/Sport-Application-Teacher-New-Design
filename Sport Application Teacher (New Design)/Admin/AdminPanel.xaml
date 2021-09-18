@@ -1,0 +1,17 @@
+﻿<Window x:Class="Sport_Application_Teacher__New_Design_.Admin.AdminPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Admin"
+        mc:Ignorable="d"
+        Title="AdminPanel" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnFaculty" Content="Факультеты" HorizontalAlignment="Left" Margin="289,88,0,0" VerticalAlignment="Top" Width="219" Click="btnFaculty_Click"/>
+        <Button Content="Специальности" HorizontalAlignment="Left" Margin="289,141,0,0" VerticalAlignment="Top" Width="219"/>
+        <Button Content="Группы" HorizontalAlignment="Left" Margin="289,199,0,0" VerticalAlignment="Top" Width="219"/>
+        <Button Content="Студенты" HorizontalAlignment="Left" Margin="289,255,0,0" VerticalAlignment="Top" Width="219"/>
+        <Button Content="Преподаватели" HorizontalAlignment="Left" Margin="289,306,0,0" VerticalAlignment="Top" Width="219"/>
+
+    </Grid>
+</Window>

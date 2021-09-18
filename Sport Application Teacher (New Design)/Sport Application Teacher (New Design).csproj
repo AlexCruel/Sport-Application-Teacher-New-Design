@@ -77,6 +77,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin\AdminFacultyWindow.xaml.cs">
+      <DependentUpon>AdminFacultyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Faculty.cs" />
     <Compile Include="Classes\Group.cs" />
     <Compile Include="Classes\Specialty.cs" />
@@ -88,6 +91,9 @@
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Teacher.cs" />
+    <Compile Include="Admin\AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PhysicalFitness.xaml.cs">
       <DependentUpon>PhysicalFitness.xaml</DependentUpon>
     </Compile>
@@ -100,6 +106,10 @@
     <Compile Include="Windows\Volunteer.xaml.cs">
       <DependentUpon>Volunteer.xaml</DependentUpon>
     </Compile>
+    <Page Include="Admin\AdminFacultyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AnalysisPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ReportStudHours.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\AdminPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,5 +1,6 @@
 ﻿using MaterialDesignThemes.Wpf;
 using Sport_Application_Teacher__New_Design_.Pages;
+using Sport_Application_Teacher__New_Design_.Admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,12 +30,18 @@ namespace Sport_Application_Teacher__New_Design_
             App.Current.Properties["frame"] = frame;
             App.Current.Properties["nameText"] = nameText;
             App.Current.Properties["nameNumber"] = nameNumber;
-            frame.Content = new AuthPage(MenuBar);
+            frame.Content = new AuthPage(MenuBar, ButtonAccount);
         }
 
         private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void btnAccount_Click(object sender, RoutedEventArgs e) 
+        {
+            new AdminPanel().Show();
+            this.Hide();
         }
 
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)

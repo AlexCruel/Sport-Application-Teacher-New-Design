@@ -30,6 +30,7 @@ namespace Sport_Application_Teacher__New_Design_
         TextBlock nameText = new TextBlock();
         TextBlock nameNumber = new TextBlock();
         Grid MenuBar = new Grid();
+        Button btnAccount = new Button();
 
         Notifier notifier = new Notifier(cfg =>
         {
@@ -46,13 +47,14 @@ namespace Sport_Application_Teacher__New_Design_
             cfg.Dispatcher = Application.Current.Dispatcher;
         });
 
-        public AuthPage(Grid menu)
+        public AuthPage(Grid menu, Button btnAccount)
         {
             InitializeComponent();
             frame = (Frame)App.Current.Properties["frame"];
             nameText = (TextBlock)App.Current.Properties["nameText"];
             nameNumber = (TextBlock)App.Current.Properties["nameNumber"];
             MenuBar = menu;
+            this.btnAccount = btnAccount;
             teacher.connectTeacher(loginBox);
         }
 
@@ -70,6 +72,7 @@ namespace Sport_Application_Teacher__New_Design_
                     nameNumber.Text = teacher.Dst.Tables["Teacher"].Rows[index][0].ToString();
                     frame.Content = new HomePage();
                     MenuBar.IsEnabled = true;
+                    btnAccount.IsEnabled = true;
                     teacher.Dst.Clear();
                     notifier.ShowSuccess("Доступ разрешен");
                 }

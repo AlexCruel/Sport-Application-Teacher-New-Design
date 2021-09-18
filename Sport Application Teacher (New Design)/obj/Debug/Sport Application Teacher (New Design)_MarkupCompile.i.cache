@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\
 Sport_Application_Teacher__New_Design_
 none
 false
 DEBUG;TRACE
-D:\Проекты\Sport App For University\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\App.xaml
-132145135393
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\App.xaml
+15-570267484
 
-23-927798557
-19-425567594
-Pages\AnalysisPage.xaml;Pages\AuthPage.xaml;MainWindow.xaml;Pages\HomePage.xaml;Pages\ReportStudHours.xaml;Windows\PhysicalFitness.xaml;Windows\ReportStudHoursWindow.xaml;Pages\ReportSumHours.xaml;Windows\ReportSumHoursWindow.xaml;Pages\StatisticsPage.xaml;Windows\SportEvents.xaml;Windows\SportSections.xaml;Windows\Volunteer.xaml;
+25-1381927702
+19-1230339834
+Admin\AdminFacultyWindow.xaml;Pages\AnalysisPage.xaml;Pages\AuthPage.xaml;MainWindow.xaml;Pages\HomePage.xaml;Pages\ReportStudHours.xaml;Admin\AdminPanel.xaml;Windows\PhysicalFitness.xaml;Windows\ReportStudHoursWindow.xaml;Pages\ReportSumHours.xaml;Windows\ReportSumHoursWindow.xaml;Pages\StatisticsPage.xaml;Windows\SportEvents.xaml;Windows\SportSections.xaml;Windows\Volunteer.xaml;
 
 True
 

@@ -17,9 +17,9 @@ namespace Sport_Application_Teacher__New_Design_
     {
         DataSet dst = new DataSet();
         SqlDataAdapter adapter;
-        string connectionString = @"Data Source=(local)\SQLEXPRESS;" +
+        string connectionString = @"Data Source=BITNB11;" +
                             "Integrated Security = SSPI;" +
-                            "Initial Catalog = sportapp1";
+                            "Initial Catalog = sportapp";
 
         public DataSet Dst
         {
