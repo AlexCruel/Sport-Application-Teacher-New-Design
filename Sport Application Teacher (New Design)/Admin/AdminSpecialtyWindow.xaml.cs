@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sport_Application_Teacher__New_Design_.Classes;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -31,10 +32,14 @@ namespace Sport_Application_Teacher__New_Design_.Admin
         {
             InitializeComponent();
 
+            Faculty fac = new Faculty(facBox);
+
             try
             {
                 connect("SELECT * FROM [Специальности]", "Specialty");
                 dataSpecialty.ItemsSource = dst.Tables["Specialty"].DefaultView;
+
+                fac.connectFaculty();
             }
             catch (SqlException ex)
             {
@@ -58,13 +63,15 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (codeSpec.Text != "Код специальности" && codeFac.Text != "Код факультета" &&
-                name.Text != "Название специальности") 
+            if (facBox.Text != "" && name.Text != "Название специальности")
             {
                 try
                 {
-                    connect($"INSERT INTO [Специальности] VALUES ({codeSpec.Text}, " +
-                        $"{codeFac.Text}, '{name.Text}')" +
+                    connect("SELECT MAX(КодСпец) FROM [Специальности]", "max_id");
+                    int max_id = Convert.ToInt32(dst.Tables["max_id"].Rows[0][0]);
+
+                    connect($"INSERT INTO [Специальности] VALUES ({max_id + 1}, " +
+                        $"{facBox.SelectedValue}, '{name.Text}')" +
                         $"SELECT * FROM [Специальности]", "Specialty");
 
                     dataSpecialty.ItemsSource = dst.Tables["Specialty"].DefaultView;
@@ -85,30 +92,6 @@ namespace Sport_Application_Teacher__New_Design_.Admin
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-
-        private void codeSpec_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (codeSpec.Text == "Код специальности")
-                codeSpec.Text = "";
-        }
-
-        private void codeSpec_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (codeSpec.Text == "")
-                codeSpec.Text = "Код специальности";
-        }
-
-        private void codeFac_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (codeFac.Text == "Код факультета")
-                codeFac.Text = "";
-        }
-
-        private void codeFac_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (codeFac.Text == "")
-                codeFac.Text = "Код факультета";
         }
 
         private void name_GotFocus(object sender, RoutedEventArgs e)

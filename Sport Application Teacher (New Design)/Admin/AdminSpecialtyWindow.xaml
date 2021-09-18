@@ -10,9 +10,8 @@
         <DataGrid x:Name="dataSpecialty" HorizontalAlignment="Left" Height="305" Margin="29,30,0,0" VerticalAlignment="Top" Width="467"/>
         <Button x:Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="588,362,0,0" VerticalAlignment="Top" Width="154" Click="btnAdd_Click"/>
         <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Left" Margin="29,362,0,0" VerticalAlignment="Top" Width="154" Click="btnBack_Click"/>
-        <TextBox x:Name="codeSpec" HorizontalAlignment="Left" Height="23" Margin="588,110,0,0" TextWrapping="Wrap" Text="Код специальности" VerticalAlignment="Top" Width="154" GotFocus="codeSpec_GotFocus" LostFocus="codeSpec_LostFocus"/>
-        <TextBox x:Name="codeFac" HorizontalAlignment="Left" Height="23" Margin="588,170,0,0" TextWrapping="Wrap" Text="Код факультета" VerticalAlignment="Top" Width="154" GotFocus="codeFac_GotFocus" LostFocus="codeFac_LostFocus"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="588,230,0,0" TextWrapping="Wrap" Text="Название специальности" VerticalAlignment="Top" Width="154" GotFocus="name_GotFocus" LostFocus="name_LostFocus"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="588,227,0,0" TextWrapping="Wrap" Text="Название специальности" VerticalAlignment="Top" Width="154" GotFocus="name_GotFocus" LostFocus="name_LostFocus"/>
+        <ComboBox x:Name="facBox" HorizontalAlignment="Left" Margin="588,150,0,0" VerticalAlignment="Top" Width="154"/>
 
     </Grid>
 </Window>
