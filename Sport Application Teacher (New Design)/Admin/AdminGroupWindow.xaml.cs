@@ -37,7 +37,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
             try
             {
-                connect("SELECT * FROM [Группы]", "Group");
+                connect("SELECT * FROM [Groups]", "Group");
                 dataGroup.ItemsSource = dst.Tables["Group"].DefaultView;
 
                 spec.connectSpecAll();
@@ -91,7 +91,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
                     connect($"INSERT INTO [Группы] VALUES ({max_id + 1}, " +
                         $"{groupBox.SelectedValue}, '{name.Text}', '{teacherBox.SelectedValue}')" +
-                        $"SELECT * FROM [Группы]", "Group");
+                        $"SELECT * FROM [Groups]", "Group");
 
                     dataGroup.ItemsSource = dst.Tables["Group"].DefaultView;
 
