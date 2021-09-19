@@ -36,7 +36,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
             try
             {
-                connect("SELECT * FROM [Специальности]", "Specialty");
+                connect("SELECT * FROM [Specialties]", "Specialty");
                 dataSpecialty.ItemsSource = dst.Tables["Specialty"].DefaultView;
 
                 fac.connectFaculty();
@@ -72,7 +72,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
                     connect($"INSERT INTO [Специальности] VALUES ({max_id + 1}, " +
                         $"{facBox.SelectedValue}, '{name.Text}')" +
-                        $"SELECT * FROM [Специальности]", "Specialty");
+                        $"SELECT * FROM [Specialties]", "Specialty");
 
                     dataSpecialty.ItemsSource = dst.Tables["Specialty"].DefaultView;
 
