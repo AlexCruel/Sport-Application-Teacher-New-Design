@@ -25,6 +25,11 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             facultyBox = faculty;
         }
 
+        public Specialty(ComboBox spec) 
+        {
+            specBox = spec;
+        }
+
         private void connect(string c, string a)
         {
             try
@@ -44,6 +49,21 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             try
             {
                 connect("SELECT * FROM [Специальности] WHERE [КодФакульт] = " + facultyBox.SelectedValue, "Spec");
+                specBox.ItemsSource = dst.Tables["Spec"].DefaultView;
+                specBox.SelectedValuePath = dst.Tables["Spec"].Columns[0].ToString();
+                specBox.DisplayMemberPath = dst.Tables["Spec"].Columns[2].ToString();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void connectSpecAll()
+        {
+            try
+            {
+                connect("SELECT * FROM [Специальности]", "Spec");
                 specBox.ItemsSource = dst.Tables["Spec"].DefaultView;
                 specBox.SelectedValuePath = dst.Tables["Spec"].Columns[0].ToString();
                 specBox.DisplayMemberPath = dst.Tables["Spec"].Columns[2].ToString();

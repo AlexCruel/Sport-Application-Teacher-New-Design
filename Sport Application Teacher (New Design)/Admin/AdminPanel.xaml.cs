@@ -33,5 +33,10 @@ namespace Sport_Application_Teacher__New_Design_.Admin
         {
             new AdminSpecialtyWindow().Show();
         }
+
+        private void btnGroup_Click(object sender, RoutedEventArgs e)
+        {
+            new AdminGroupWindow().Show();
+        }
     }
 }

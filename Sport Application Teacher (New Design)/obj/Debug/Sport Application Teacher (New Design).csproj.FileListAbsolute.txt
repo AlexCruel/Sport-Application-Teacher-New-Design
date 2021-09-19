@@ -166,3 +166,5 @@ D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (Ne
 D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminFacultyWindow.baml
 D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminSpecialtyWindow.g.cs
 D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminSpecialtyWindow.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminGroupWindow.g.cs
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminGroupWindow.baml

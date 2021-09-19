@@ -20,6 +20,7 @@ namespace Sport_Application_Teacher__New_Design_
         string connectionString = @"Data Source=BITNB11;" +
                             "Integrated Security = SSPI;" +
                             "Initial Catalog = sportapp";
+        ComboBox teachBox;
 
         public DataSet Dst
         {
@@ -52,6 +53,21 @@ namespace Sport_Application_Teacher__New_Design_
                 connect("SELECT * FROM [Преподаватели]", "Teacher");
                 teacherBox.ItemsSource = dst.Tables["Teacher"].DefaultView;
                 teacherBox.SelectedValuePath = dst.Tables["Teacher"].Columns[2].ToString();
+                teacherBox.DisplayMemberPath = dst.Tables["Teacher"].Columns[1].ToString();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void connectTeacherID(ComboBox teacherBox) 
+        {
+            try
+            {
+                connect("SELECT * FROM [Преподаватели]", "Teacher");
+                teacherBox.ItemsSource = dst.Tables["Teacher"].DefaultView;
+                teacherBox.SelectedValuePath = dst.Tables["Teacher"].Columns[0].ToString();
                 teacherBox.DisplayMemberPath = dst.Tables["Teacher"].Columns[1].ToString();
             }
             catch (SqlException ex)
