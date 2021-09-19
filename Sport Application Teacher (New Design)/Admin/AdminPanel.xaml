@@ -10,7 +10,7 @@
         <Button x:Name="btnFaculty" Content="Факультеты" HorizontalAlignment="Left" Margin="289,88,0,0" VerticalAlignment="Top" Width="219" Click="btnFaculty_Click"/>
         <Button x:Name="btnSpecialty" Content="Специальности" HorizontalAlignment="Left" Margin="289,141,0,0" VerticalAlignment="Top" Width="219" Click="btnSpecialty_Click"/>
         <Button x:Name="btnGroup" Content="Группы" HorizontalAlignment="Left" Margin="289,199,0,0" VerticalAlignment="Top" Width="219" Click="btnGroup_Click"/>
-        <Button x:Name="btnStudent" Content="Студенты" HorizontalAlignment="Left" Margin="289,255,0,0" VerticalAlignment="Top" Width="219"/>
+        <Button x:Name="btnStudent" Content="Студенты" HorizontalAlignment="Left" Margin="289,255,0,0" VerticalAlignment="Top" Width="219" Click="btnStudent_Click"/>
         <Button x:Name="btnTeacher" Content="Преподаватели" HorizontalAlignment="Left" Margin="289,306,0,0" VerticalAlignment="Top" Width="219"/>
 
     </Grid>

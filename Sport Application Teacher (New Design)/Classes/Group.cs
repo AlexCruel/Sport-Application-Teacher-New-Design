@@ -59,6 +59,21 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
+        public void connectGroupAll() 
+        {
+            try
+            {
+                connect($"SELECT * FROM [Группы]", "Group");
+                groupBox.ItemsSource = dst.Tables["Group"].DefaultView;
+                groupBox.SelectedValuePath = dst.Tables["Group"].Columns[0].ToString();
+                groupBox.DisplayMemberPath = dst.Tables["Group"].Columns[2].ToString();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void connectGroupStat(TextBlock nameNumber)
         {
             try

@@ -1,0 +1,16 @@
+﻿<Window x:Class="Sport_Application_Teacher__New_Design_.Admin.AdminStudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Admin"
+        mc:Ignorable="d"
+        Title="AdminStudentWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dataStudent" HorizontalAlignment="Left" Height="328" Margin="10,10,0,0" VerticalAlignment="Top" Width="576"/>
+        <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" Width="154" Click="btnBack_Click"/>
+        <Button x:Name="btnChangeGroup" Content="Сменить группу" HorizontalAlignment="Left" Margin="613,362,0,0" VerticalAlignment="Top" Width="154" Click="btnChangeGroup_Click"/>
+        <ComboBox x:Name="groupBox" HorizontalAlignment="Left" Margin="613,173,0,0" VerticalAlignment="Top" Width="154"/>
+
+    </Grid>
+</Window>
