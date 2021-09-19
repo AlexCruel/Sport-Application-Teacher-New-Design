@@ -43,5 +43,10 @@ namespace Sport_Application_Teacher__New_Design_.Admin
         {
             new AdminStudentWindow().Show();
         }
+
+        private void btnTeacher_Click(object sender, RoutedEventArgs e)
+        {
+            new AdminTeacherWindow().Show();
+        }
     }
 }

@@ -89,6 +89,9 @@
     <Compile Include="Admin\AdminStudentWindow.xaml.cs">
       <DependentUpon>AdminStudentWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminTeacherWindow.xaml.cs">
+      <DependentUpon>AdminTeacherWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Faculty.cs" />
     <Compile Include="Classes\Group.cs" />
     <Compile Include="Classes\Specialty.cs" />
@@ -128,6 +131,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Admin\AdminStudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\AdminTeacherWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
