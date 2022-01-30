@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Admin"
         mc:Ignorable="d"
-        Title="AdminFacultyWindow" Height="450" Width="800">
+        Title="Факультеты" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <DataGrid x:Name="dataFaculty" HorizontalAlignment="Left" Height="314" Margin="26,24,0,0" VerticalAlignment="Top" Width="445"/>
         <Button x:Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="571,360,0,0" VerticalAlignment="Top" Width="169" Click="btnAdd_Click"/>

@@ -24,7 +24,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
     {
         DataSet dst = new DataSet();
         SqlDataAdapter adapter;
-        string connectionString = @"Data Source=BITNB11;" +
+        string connectionString = @"Data Source=BITNB117\SQLEXPRESSE;" +
                             "Integrated Security = SSPI;" +
                             "Initial Catalog = sportapp";
 
@@ -37,7 +37,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
             try
             {
-                connect("SELECT * FROM [Groups]", "Group");
+                connect("SELECT [НазвСпец], [Группа], [ФИО_Препод] FROM [Groups]", "Group");
                 dataGroup.ItemsSource = dst.Tables["Group"].DefaultView;
 
                 spec.connectSpecAll();
@@ -91,7 +91,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
                     connect($"INSERT INTO [Группы] VALUES ({max_id + 1}, " +
                         $"{groupBox.SelectedValue}, '{name.Text}', '{teacherBox.SelectedValue}')" +
-                        $"SELECT * FROM [Groups]", "Group");
+                        $"SELECT [НазвСпец], [Группа], [ФИО_Препод] FROM [Groups]", "Group");
 
                     dataGroup.ItemsSource = dst.Tables["Group"].DefaultView;
 

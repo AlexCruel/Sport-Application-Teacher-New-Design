@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d" Height="600" Width="1080" WindowStartupLocation="CenterScreen" Foreground="White" WindowStyle="None" ResizeMode="NoResize">
 
     <Window.Resources>
@@ -53,11 +54,11 @@
                 <TextBlock Text="v1.2" VerticalAlignment="Center" FontSize="18"/>
 
                 <materialDesign:PackIcon x:Name="Magnify" Margin="20 20 0 20" Kind="Magnify" Width="25" Height="25" VerticalAlignment="Center" >
-                    
+
                 </materialDesign:PackIcon>
                 <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel Width="150">
-                        <Button x:Name="ButtonAccount" Content="Аккаунт" IsEnabled="False" Click="btnAccount_Click"/>
+                        <Button x:Name="ButtonAccount" Content="Админ. панель" IsEnabled="False" Click="btnAccount_Click"/>
                         <Button Content="Настройки" IsEnabled="False"/>
                         <Button Content="Помощь" IsEnabled="False"/>
                         <Separator/>
@@ -66,7 +67,7 @@
                 </materialDesign:PopupBox>
             </StackPanel>
         </Grid>
-        
+
         <!--MenuBar-->
         <Grid x:Name="MenuBar" Width="60" HorizontalAlignment="Left" Background="#FF174B89" IsEnabled="False">
             <StackPanel>

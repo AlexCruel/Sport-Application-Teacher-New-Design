@@ -172,3 +172,4 @@ D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (Ne
 D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminStudentWindow.baml
 D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminTeacherWindow.g.cs
 D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Admin\AdminTeacherWindow.baml
+D:\Projects\Sport Application Teacher (New Design)\Sport Application Teacher (New Design)\obj\Debug\Sport Application Teacher (New Design).csproj.SuggestedBindingRedirects.cache

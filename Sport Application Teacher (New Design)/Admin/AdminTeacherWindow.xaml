@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Admin"
         mc:Ignorable="d"
-        Title="AdminTeacherWindow" Height="450" Width="800">
+        Title="AdminTeacherWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <DataGrid x:Name="dataGroup" HorizontalAlignment="Left" Height="334" Margin="10,10,0,0" VerticalAlignment="Top" Width="570"/>
         <Button x:Name="btnChange" Content="Сменить" HorizontalAlignment="Left" Margin="620,366,0,0" VerticalAlignment="Top" Width="133" Click="btnChange_Click"/>
         <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" Width="133" Click="btnBack_Click"/>
-        <ComboBox x:Name="teacherBox" HorizontalAlignment="Left" Margin="620,167,0,0" VerticalAlignment="Top" Width="133"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="620,154,0,0" TextWrapping="Wrap" Text="ФИО" VerticalAlignment="Top" Width="154" GotFocus="name_GotFocus" LostFocus="name_LostFocus"/>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Height="23" Margin="620,0,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Center" Width="154" GotFocus="password_GotFocus" LostFocus="password_LostFocus"/>
+        <TextBox x:Name="numberTeacher" HorizontalAlignment="Left" Height="23" Margin="620,118,0,0" TextWrapping="Wrap" Text="Номер" VerticalAlignment="Top" Width="154" GotFocus="numberTeacher_GotFocus" LostFocus="numberTeacher_LostFocus"/>
 
     </Grid>
 </Window>

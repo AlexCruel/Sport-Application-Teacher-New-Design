@@ -14,7 +14,7 @@ namespace Sport_Application_Teacher__New_Design_.Classes
     {
         DataSet dst = new DataSet();
         SqlDataAdapter adapter;
-        string connectionString = @"Data Source=BITNB11;" +
+        string connectionString = @"Data Source=BITNB117\SQLEXPRESSE;" +
                             "Integrated Security = SSPI;" +
                             "Initial Catalog = sportapp";
         ComboBox groupBox, specBox;

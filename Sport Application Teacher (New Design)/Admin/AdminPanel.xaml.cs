@@ -48,5 +48,10 @@ namespace Sport_Application_Teacher__New_Design_.Admin
         {
             new AdminTeacherWindow().Show();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Close();
+        }
     }
 }

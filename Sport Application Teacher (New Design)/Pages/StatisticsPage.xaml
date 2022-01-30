@@ -22,7 +22,7 @@
                 <Wpf:PieSeries Title="Объект" Values="100" DataLabels="True"/>
             </Wpf:PieChart.Series>
         </Wpf:PieChart>
-
+        
         <Button Content="Показать" HorizontalAlignment="Left" Margin="305,521,0,0" VerticalAlignment="Top" Width="100" Click="ButtonShowStat" Background="#FF544DA5" FontWeight="Bold"/>
         <ComboBox x:Name="groupBox" FontSize="20" HorizontalAlignment="Left" Margin="251,439,0,0" VerticalAlignment="Top" Width="217" SelectionChanged="groupBox_SelectionChanged" />
 

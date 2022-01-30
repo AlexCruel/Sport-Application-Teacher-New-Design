@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Admin"
         mc:Ignorable="d"
-        Title="AdminGroupWindow" Height="450" Width="800">
+        Title="Группы" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <DataGrid x:Name="dataGroup" HorizontalAlignment="Left" Height="334" Margin="10,10,0,0" VerticalAlignment="Top" Width="577"/>
         <Button x:Name="btnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="623,368,0,0" VerticalAlignment="Top" Width="137" Click="btnAdd_Click"/>

@@ -24,7 +24,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
     {
         DataSet dst = new DataSet();
         SqlDataAdapter adapter;
-        string connectionString = @"Data Source=BITNB11;" +
+        string connectionString = @"Data Source=BITNB117\SQLEXPRESSE;" +
                             "Integrated Security = SSPI;" +
                             "Initial Catalog = sportapp";
 
@@ -104,6 +104,11 @@ namespace Sport_Application_Teacher__New_Design_.Admin
         {
             if (name.Text == "")
                 name.Text = "Название специальности";
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Hide();
         }
     }
 }

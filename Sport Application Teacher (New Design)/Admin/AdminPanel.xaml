@@ -5,13 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sport_Application_Teacher__New_Design_.Admin"
         mc:Ignorable="d"
-        Title="AdminPanel" Height="450" Width="800">
+        Title="AdminPanel" Height="450" Width="800" ResizeMode="NoResize" Closing="Window_Closing">
     <Grid>
-        <Button x:Name="btnFaculty" Content="Факультеты" HorizontalAlignment="Left" Margin="289,88,0,0" VerticalAlignment="Top" Width="219" Click="btnFaculty_Click"/>
-        <Button x:Name="btnSpecialty" Content="Специальности" HorizontalAlignment="Left" Margin="289,141,0,0" VerticalAlignment="Top" Width="219" Click="btnSpecialty_Click"/>
-        <Button x:Name="btnGroup" Content="Группы" HorizontalAlignment="Left" Margin="289,199,0,0" VerticalAlignment="Top" Width="219" Click="btnGroup_Click"/>
-        <Button x:Name="btnStudent" Content="Студенты" HorizontalAlignment="Left" Margin="289,255,0,0" VerticalAlignment="Top" Width="219" Click="btnStudent_Click"/>
-        <Button x:Name="btnTeacher" Content="Преподаватели" HorizontalAlignment="Left" Margin="289,306,0,0" VerticalAlignment="Top" Width="219" Click="btnTeacher_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="317*"/>
+            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="222*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnFaculty" Content="Добавить факультет" HorizontalAlignment="Left" Margin="280,88,0,0" VerticalAlignment="Top" Width="219" Click="btnFaculty_Click" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Button x:Name="btnSpecialty" Content="Добавить специальность" HorizontalAlignment="Left" Margin="280,141,0,0" VerticalAlignment="Top" Width="219" Click="btnSpecialty_Click" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Button x:Name="btnGroup" Content="Создать группу" HorizontalAlignment="Left" Margin="280,199,0,0" VerticalAlignment="Top" Width="219" Click="btnGroup_Click" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Button x:Name="btnStudent" Content="Студенты" HorizontalAlignment="Left" Margin="280,255,0,0" VerticalAlignment="Top" Width="219" Click="btnStudent_Click" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Button x:Name="btnTeacher" Content="Добавить преподавателя" HorizontalAlignment="Left" Margin="280,306,0,0" VerticalAlignment="Top" Width="219" Click="btnTeacher_Click" Grid.ColumnSpan="3" Grid.Column="1"/>
 
     </Grid>
 </Window>

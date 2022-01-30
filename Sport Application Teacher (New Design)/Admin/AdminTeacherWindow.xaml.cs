@@ -23,7 +23,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
     {
         DataSet dst = new DataSet();
         SqlDataAdapter adapter;
-        string connectionString = @"Data Source=BITNB11;" +
+        string connectionString = @"Data Source=BITNB117\SQLEXPRESSE;" +
                             "Integrated Security = SSPI;" +
                             "Initial Catalog = sportapp";
 
@@ -35,10 +35,10 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
             try
             {
-                connect("SELECT [Группа], [ФИО_Препод], [КодГруппы] FROM [Groups]", "Group");
-                dataGroup.ItemsSource = dst.Tables["Group"].DefaultView;
+                connect("SELECT [НомерПрепод], [ФИО_Препод] FROM [Преподаватели]", "Teacher");
+                dataGroup.ItemsSource = dst.Tables["Teacher"].DefaultView;
 
-                teacher.connectTeacherID(teacherBox);
+                // teacher.connectTeacherID(teacherBox);
             }
             catch (SqlException ex)
             {
@@ -67,31 +67,67 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
         private void btnChange_Click(object sender, RoutedEventArgs e)
         {
-            if (teacherBox.Text != "" && dataGroup.SelectedItem != null)
-            {
-                try
-                {
-                    var idGroup = (TextBlock)dataGroup.Columns[2].GetCellContent(dataGroup.SelectedItem);
-                    var nameGroup = (TextBlock)dataGroup.Columns[0].GetCellContent(dataGroup.SelectedItem);
-                    var nameTeacher = (TextBlock)dataGroup.Columns[1].GetCellContent(dataGroup.SelectedItem);
-                    // var idTeacher = (TextBlock)dataGroup.Columns[2].GetCellContent(dataGroup.SelectedItem);
+            //if (teacherBox.Text != "" && dataGroup.SelectedItem != null)
+            //{
+            //    try
+            //    {
+            //        var idGroup = (TextBlock)dataGroup.Columns[2].GetCellContent(dataGroup.SelectedItem);
+            //        var nameGroup = (TextBlock)dataGroup.Columns[0].GetCellContent(dataGroup.SelectedItem);
+            //        var nameTeacher = (TextBlock)dataGroup.Columns[1].GetCellContent(dataGroup.SelectedItem);
+            //        // var idTeacher = (TextBlock)dataGroup.Columns[2].GetCellContent(dataGroup.SelectedItem);
 
-                    connect($"UPDATE [Группы] SET [НомерПрепод] = '{teacherBox.SelectedValue}'" +
-                        $"WHERE [КодГруппы] = '{idGroup.Text}'" +
-                        $"SELECT [Группа], [ФИО_Препод], [КодГруппы] FROM [Groups]", "Group");
+            //        connect($"UPDATE [Группы] SET [НомерПрепод] = '{teacherBox.SelectedValue}'" +
+            //            $"WHERE [КодГруппы] = '{idGroup.Text}'" +
+            //            $"SELECT [Группа], [ФИО_Препод], [КодГруппы] FROM [Groups]", "Group");
 
-                    MessageBox.Show($"Преподаватель для группы {nameGroup.Text}: " +
-                        $"'{nameTeacher.Text}' => '{teacherBox.Text}'", "Успех",
-                       MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-                MessageBox.Show("Введите данные корректно!",
-                   "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //        MessageBox.Show($"Преподаватель для группы {nameGroup.Text}: " +
+            //            $"'{nameTeacher.Text}' => '{teacherBox.Text}'", "Успех",
+            //           MessageBoxButton.OK, MessageBoxImage.Information);
+            //    }
+            //    catch (SqlException ex)
+            //    {
+            //        MessageBox.Show(ex.Message);
+            //    }
+            //}
+            //else
+            //    MessageBox.Show("Введите данные корректно!",
+            //       "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
+        private void name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (name.Text == "ФИО")
+                name.Text = "";
+        }
+
+        private void name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (name.Text == "")
+                name.Text = "ФИО";
+        }
+
+        private void numberTeacher_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (numberTeacher.Text == "Номер")
+                numberTeacher.Text = "";
+        }
+
+        private void numberTeacher_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (numberTeacher.Text == "")
+                numberTeacher.Text = "Номер";
+        }
+
+        private void password_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (password.Text == "Пароль")
+                password.Text = "";
+        }
+
+        private void password_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (password.Text == "")
+                password.Text = "Пароль";
         }
     }
 }

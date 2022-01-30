@@ -72,7 +72,10 @@ namespace Sport_Application_Teacher__New_Design_
                     nameNumber.Text = teacher.Dst.Tables["Teacher"].Rows[index][0].ToString();
                     frame.Content = new HomePage();
                     MenuBar.IsEnabled = true;
-                    btnAccount.IsEnabled = true;
+
+                    if (loginBox.Text == "Админ1")
+                        btnAccount.IsEnabled = true;
+
                     teacher.Dst.Clear();
                     notifier.ShowSuccess("Доступ разрешен");
                 }
