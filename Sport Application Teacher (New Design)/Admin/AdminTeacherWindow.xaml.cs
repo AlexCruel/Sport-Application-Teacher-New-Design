@@ -36,9 +36,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
             try
             {
                 connect("SELECT [НомерПрепод], [ФИО_Препод] FROM [Преподаватели]", "Teacher");
-                dataGroup.ItemsSource = dst.Tables["Teacher"].DefaultView;
-
-                // teacher.connectTeacherID(teacherBox);
+                dataTeacher.ItemsSource = dst.Tables["Teacher"].DefaultView;
             }
             catch (SqlException ex)
             {
@@ -60,38 +58,34 @@ namespace Sport_Application_Teacher__New_Design_.Admin
             }
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Close();
-        }
+            if (numberTeacher.Text != "" && name.Text != "" && password.Text != "Пароль")
+            {
+                if (password.Text.Length >= 5)
+                {
+                    try
+                    {
+                        connect($"INSERT INTO [Преподаватели] VALUES ('{numberTeacher.Text}', '{name.Text}', {password.Text})" +
+                            "SELECT * FROM [Преподаватели]", "Teacher");
 
-        private void btnChange_Click(object sender, RoutedEventArgs e)
-        {
-            //if (teacherBox.Text != "" && dataGroup.SelectedItem != null)
-            //{
-            //    try
-            //    {
-            //        var idGroup = (TextBlock)dataGroup.Columns[2].GetCellContent(dataGroup.SelectedItem);
-            //        var nameGroup = (TextBlock)dataGroup.Columns[0].GetCellContent(dataGroup.SelectedItem);
-            //        var nameTeacher = (TextBlock)dataGroup.Columns[1].GetCellContent(dataGroup.SelectedItem);
-            //        // var idTeacher = (TextBlock)dataGroup.Columns[2].GetCellContent(dataGroup.SelectedItem);
+                        dataTeacher.ItemsSource = dst.Tables["Teacher"].DefaultView;
 
-            //        connect($"UPDATE [Группы] SET [НомерПрепод] = '{teacherBox.SelectedValue}'" +
-            //            $"WHERE [КодГруппы] = '{idGroup.Text}'" +
-            //            $"SELECT [Группа], [ФИО_Препод], [КодГруппы] FROM [Groups]", "Group");
-
-            //        MessageBox.Show($"Преподаватель для группы {nameGroup.Text}: " +
-            //            $"'{nameTeacher.Text}' => '{teacherBox.Text}'", "Успех",
-            //           MessageBoxButton.OK, MessageBoxImage.Information);
-            //    }
-            //    catch (SqlException ex)
-            //    {
-            //        MessageBox.Show(ex.Message);
-            //    }
-            //}
-            //else
-            //    MessageBox.Show("Введите данные корректно!",
-            //       "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        MessageBox.Show($"Преподаватель '{name.Text}' добавлен", "Успех",
+                                    MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                    MessageBox.Show("Пароль должен содержать минимум 5 символов!",
+                        "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+                MessageBox.Show("Не заполнены поля!",
+                        "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
         private void name_GotFocus(object sender, RoutedEventArgs e)
@@ -128,6 +122,11 @@ namespace Sport_Application_Teacher__New_Design_.Admin
         {
             if (password.Text == "")
                 password.Text = "Пароль";
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
