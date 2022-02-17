@@ -17,9 +17,10 @@ namespace Sport_Application_Teacher__New_Design_
     {
         DataSet dst = new DataSet();
         SqlDataAdapter adapter;
-        string connectionString = @"Data Source=(local)\SQLEXPRESS;" +
+        string connectionString = @"Data Source=BITNB117\SQLEXPRESSE;" +
                             "Integrated Security = SSPI;" +
-                            "Initial Catalog = sportapp1";
+                            "Initial Catalog = sportapp";
+        ComboBox teachBox;
 
         public DataSet Dst
         {
@@ -60,11 +61,40 @@ namespace Sport_Application_Teacher__New_Design_
             }
         }
 
+        public void connectTeacherID(ComboBox teacherBox) 
+        {
+            try
+            {
+                connect("SELECT * FROM [Преподаватели]", "Teacher");
+                teacherBox.ItemsSource = dst.Tables["Teacher"].DefaultView;
+                teacherBox.SelectedValuePath = dst.Tables["Teacher"].Columns[0].ToString();
+                teacherBox.DisplayMemberPath = dst.Tables["Teacher"].Columns[1].ToString();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void connectStudHours(ComboBox value, DataGrid studHours)
         {
             try
             {
                 connect($"SELECT [Студенческий номер], [ФИО Студента], [Всего отработано часов] FROM [Sum_HoursFull] WHERE [Группа] = '{value.Text}'", "Hours");
+                studHours.ItemsSource = dst.Tables["Hours"].DefaultView;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void connectGroupHours(ComboBox value, DataGrid studHours, DatePicker dateFrom, DatePicker dateTo)
+        {
+            try
+            {
+                connect($"EXEC GroupHours @Группа = '{value.Text}', @ДатаОт = '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', @ДатаДо = '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}'", "Hours");
+
                 studHours.ItemsSource = dst.Tables["Hours"].DefaultView;
             }
             catch (SqlException ex)

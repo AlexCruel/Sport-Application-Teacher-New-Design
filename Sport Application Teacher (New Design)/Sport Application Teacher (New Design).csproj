@@ -8,13 +8,14 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Sport_Application_Teacher__New_Design_</RootNamespace>
     <AssemblyName>Sport Application Teacher %28New Design%29</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -77,6 +78,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin\AdminAddStudentWindow.xaml.cs">
+      <DependentUpon>AdminAddStudentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminFacultyWindow.xaml.cs">
+      <DependentUpon>AdminFacultyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminGroupWindow.xaml.cs">
+      <DependentUpon>AdminGroupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSpecialtyWindow.xaml.cs">
+      <DependentUpon>AdminSpecialtyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminStudentWindow.xaml.cs">
+      <DependentUpon>AdminStudentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminTeacherWindow.xaml.cs">
+      <DependentUpon>AdminTeacherWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Faculty.cs" />
     <Compile Include="Classes\Group.cs" />
     <Compile Include="Classes\Specialty.cs" />
@@ -88,6 +107,9 @@
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Teacher.cs" />
+    <Compile Include="Admin\AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PhysicalFitness.xaml.cs">
       <DependentUpon>PhysicalFitness.xaml</DependentUpon>
     </Compile>
@@ -100,6 +122,30 @@
     <Compile Include="Windows\Volunteer.xaml.cs">
       <DependentUpon>Volunteer.xaml</DependentUpon>
     </Compile>
+    <Page Include="Admin\AdminAddStudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\AdminFacultyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\AdminGroupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\AdminSpecialtyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\AdminStudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\AdminTeacherWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AnalysisPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +171,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ReportStudHours.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\AdminPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

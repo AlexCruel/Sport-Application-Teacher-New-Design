@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Sport_Application_Teacher__New_Design_.Windows
+namespace Sport_Application_Teacher__New_Design_.Admin
 {
     /// <summary>
     /// Логика взаимодействия для SportSections.xaml

@@ -14,9 +14,9 @@ namespace Sport_Application_Teacher__New_Design_.Classes
     {
         DataSet dst = new DataSet();
         SqlDataAdapter adapter;
-        string connectionString = @"Data Source=(local)\SQLEXPRESS;" +
+        string connectionString = @"Data Source=BITNB117\SQLEXPRESSE;" +
                             "Integrated Security = SSPI;" +
-                            "Initial Catalog = sportapp1";
+                            "Initial Catalog = sportapp";
         ComboBox groupBox, specBox;
 
         public Group(ComboBox group, ComboBox spec)
@@ -48,7 +48,23 @@ namespace Sport_Application_Teacher__New_Design_.Classes
         {
             try
             {
-                connect($"SELECT * FROM [Группы] WHERE [КодСпец] = {specBox.SelectedValue} AND [НомерПрепод] = '{nameNumber.Text}'", "Group");
+                // connect($"SELECT * FROM [Группы] WHERE [КодСпец] = {specBox.SelectedValue} AND [НомерПрепод] = '{nameNumber.Text}'", "Group");
+                connect($"SELECT * FROM [Группы] WHERE [КодСпец] = {specBox.SelectedValue}", "Group");
+                groupBox.ItemsSource = dst.Tables["Group"].DefaultView;
+                groupBox.SelectedValuePath = dst.Tables["Group"].Columns[0].ToString();
+                groupBox.DisplayMemberPath = dst.Tables["Group"].Columns[2].ToString();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void connectGroupAll() 
+        {
+            try
+            {
+                connect($"SELECT * FROM [Группы]", "Group");
                 groupBox.ItemsSource = dst.Tables["Group"].DefaultView;
                 groupBox.SelectedValuePath = dst.Tables["Group"].Columns[0].ToString();
                 groupBox.DisplayMemberPath = dst.Tables["Group"].Columns[2].ToString();
