@@ -51,8 +51,6 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             this.dateFrom = dateFrom;
             this.dateTo = dateTo;
             teacher.connectGroupHours(group, studHoursGrid, dateFrom, dateTo);
-
-            
         }
 
         public ReportSumHoursWindow(ComboBox group)
@@ -70,7 +68,8 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                ReportStudHoursWindow reportStudHours = new ReportStudHoursWindow(studNumber, studName, groupBox);
+                ReportStudHoursWindow reportStudHours = new 
+                    ReportStudHoursWindow(studNumber, studName, groupBox, dateFrom, dateTo);
                 reportStudHours.Show();
                 Close();
             }

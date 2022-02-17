@@ -37,11 +37,15 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectStudList(DataGrid studHours, string studNumber)
+        public void connectStudList(DataGrid studHours, string studNumber, DatePicker dateFrom, DatePicker dateTo)
         {
             try
             {
-                connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [СтудНомер] = '{studNumber}'", "Student");
+                // connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [СтудНомер] = '{studNumber}'", "Student");
+                connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] " +
+                    $"WHERE [СтудНомер] = '{studNumber}' " +
+                    $"AND [Дата] >= convert(DATETIME, {dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd")}, 102) " +
+                    $"AND [Дата] <= convert(DATETIME, {dateTo.SelectedDate.Value.ToString("yyyy-MM-dd")}, 102)", "Student");
                 studHours.ItemsSource = dst.Tables["Student"].DefaultView;
             }
             catch (SqlException ex)
