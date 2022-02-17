@@ -24,5 +24,7 @@
             </Grid>
             <Button x:Name="buttonShow" Content="Показать" Width="95" Height="35" Margin="30" Click="ButtonShowHours" Background="#FF544DA5" FontWeight="Bold"/>
         </StackPanel>
+        <DatePicker x:Name="dateTo" HorizontalAlignment="Left" Margin="985,110,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dateFrom" HorizontalAlignment="Left" Margin="985,74,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

@@ -13,6 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ToastNotifications;
+using ToastNotifications.Lifetime;
+using ToastNotifications.Messages;
+using ToastNotifications.Position;
 
 namespace Sport_Application_Teacher__New_Design_.Pages
 {
@@ -23,6 +27,21 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     {
         Frame frame = new Frame();
         TextBlock nameNumber = new TextBlock();
+
+        Notifier notifier = new Notifier(cfg =>
+        {
+            cfg.PositionProvider = new WindowPositionProvider(
+                parentWindow: Application.Current.MainWindow,
+                corner: Corner.TopRight,
+                offsetX: 10,
+                offsetY: 10);
+
+            cfg.LifetimeSupervisor = new TimeAndCountBasedLifetimeSupervisor(
+                notificationLifetime: TimeSpan.FromSeconds(3),
+                maximumNotificationCount: MaximumNotificationCount.FromCount(5));
+
+            cfg.Dispatcher = Application.Current.Dispatcher;
+        });
 
         public AnalysisPage()
         {
@@ -57,14 +76,14 @@ namespace Sport_Application_Teacher__New_Design_.Pages
 
         private void ButtonShowHours(object sender, RoutedEventArgs e)
         {
-            if (groupBox.Text != "") 
+            if (groupBox.Text != "" && dateFrom.Text != "" && dateTo.Text != "")
             {
                 // frame.Content = new ReportSumHours(groupBox);
-                ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox);
+                ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox, dateFrom, dateTo);
                 reportSumHours.Show();
             }
             else
-                MessageBox.Show("Укажите группу!");
+                notifier.ShowWarning("Укажите группу и диапазон дат");
         }
     }
 }

@@ -36,8 +36,8 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
             try
             {
-                connect("SELECT * FROM [Студенты]", "Student");
-                dataStudent.ItemsSource = dst.Tables["Student"].DefaultView;
+                connect("SELECT * FROM [Студенты]", "Students");
+                dataStudent.ItemsSource = dst.Tables["Students"].DefaultView;
                
                 group.connectGroupAll();
             }
@@ -72,15 +72,15 @@ namespace Sport_Application_Teacher__New_Design_.Admin
             {
                 try
                 {
-                    var idStud = (TextBlock)dataStudent.Columns[2].GetCellContent(dataStudent.SelectedItem);
-                    var nameStud = (TextBlock)dataStudent.Columns[0].GetCellContent(dataStudent.SelectedItem);
-                    var groupStud = (TextBlock)dataStudent.Columns[1].GetCellContent(dataStudent.SelectedItem);
+                    var idStud = (TextBlock)dataStudent.Columns[0].GetCellContent(dataStudent.SelectedItem);
+                    var nameStud = (TextBlock)dataStudent.Columns[2].GetCellContent(dataStudent.SelectedItem);
+                    var groupStud = (TextBlock)dataStudent.Columns[3].GetCellContent(dataStudent.SelectedItem);
 
                     connect($"UPDATE [Студенты] SET [КодГруппы] = '{groupBox.SelectedValue}'" +
                         $"WHERE [СтудНомер] = '{idStud.Text}'" +
-                        $"SELECT * FROM [Students]", "Student");
+                        $"SELECT * FROM [Students]", "Students");
 
-                    MessageBox.Show($"Группа для студента {nameStud.Text}: '{groupStud.Text}' => '{groupBox.Text}'", "Успех",
+                    MessageBox.Show($"Группа для студента {nameStud.Text} сменена: '{groupStud.Text}' на '{groupBox.Text}'", "Успех",
                        MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 catch (SqlException ex) 

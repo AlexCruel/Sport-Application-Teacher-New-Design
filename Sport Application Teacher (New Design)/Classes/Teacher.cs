@@ -89,6 +89,20 @@ namespace Sport_Application_Teacher__New_Design_
             }
         }
 
+        public void connectGroupHours(ComboBox value, DataGrid studHours, DatePicker dateFrom, DatePicker dateTo)
+        {
+            try
+            {
+                connect($"EXEC GroupHours @Группа = '{value.Text}', @ДатаОт = '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', @ДатаДо = '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}'", "Hours");
+
+                studHours.ItemsSource = dst.Tables["Hours"].DefaultView;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public Dictionary<string, int> getStat(ComboBox studBox)
         {
             Dictionary<string, int> dict = new Dictionary<string, int>();

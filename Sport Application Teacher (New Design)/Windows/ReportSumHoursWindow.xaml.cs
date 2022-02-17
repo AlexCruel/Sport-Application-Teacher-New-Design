@@ -26,6 +26,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     {
         Teacher teacher = new Teacher();
         ComboBox groupBox = new ComboBox();
+        DatePicker dateFrom, dateTo;
 
         Notifier notifier = new Notifier(cfg =>
         {
@@ -42,12 +43,22 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             cfg.Dispatcher = Application.Current.Dispatcher;
         });
 
-        public ReportSumHoursWindow(ComboBox group)
+        public ReportSumHoursWindow(ComboBox group, DatePicker dateFrom, DatePicker dateTo)
         {
             InitializeComponent();
             groupBox = group;
             groupBlock.Text = group.Text;
-            teacher.connectStudHours(group, studHoursGrid);
+            this.dateFrom = dateFrom;
+            this.dateTo = dateTo;
+            teacher.connectGroupHours(group, studHoursGrid, dateFrom, dateTo);
+
+            
+        }
+
+        public ReportSumHoursWindow(ComboBox group)
+        {
+            InitializeComponent();
+            
         }
 
         private void Button_Sheet(object sender, RoutedEventArgs e)
