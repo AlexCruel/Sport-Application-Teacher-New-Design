@@ -84,7 +84,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                Volunteer volunteer = new Volunteer(studNumber, studName, groupBox);
+                Volunteer volunteer = new Volunteer(studNumber, studName, groupBox, dateFrom, dateTo);
                 volunteer.Show();
                 Close();
             }
