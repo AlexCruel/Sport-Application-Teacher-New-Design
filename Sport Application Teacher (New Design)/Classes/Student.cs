@@ -41,11 +41,10 @@ namespace Sport_Application_Teacher__New_Design_.Classes
         {
             try
             {
-                // connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [СтудНомер] = '{studNumber}'", "Student");
                 connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] " +
-                    $"WHERE [СтудНомер] = '{studNumber}' " +
-                    $"AND [Дата] >= convert(DATETIME, {dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd")}, 102) " +
-                    $"AND [Дата] <= convert(DATETIME, {dateTo.SelectedDate.Value.ToString("yyyy-MM-dd")}, 102)", "Student");
+                    $"WHERE [СтудНомер] = '1802001' " +
+                    $"AND [Дата] >= convert(DATETIME, '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102) " +
+                    $"AND [Дата] <= convert(DATETIME, '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102)", "Student");
                 studHours.ItemsSource = dst.Tables["Student"].DefaultView;
             }
             catch (SqlException ex)
