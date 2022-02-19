@@ -114,7 +114,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                SportEvents events = new SportEvents(studNumber, studName, groupBox);
+                SportEvents events = new SportEvents(studNumber, studName, groupBox, dateFrom, dateTo);
                 events.Show();
                 Close();
             }
