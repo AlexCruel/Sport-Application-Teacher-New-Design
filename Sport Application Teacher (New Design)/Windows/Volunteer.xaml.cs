@@ -23,15 +23,20 @@ namespace Sport_Application_Teacher__New_Design_.Admin
     {
         Student student = new Student();
         ComboBox groupBox = new ComboBox();
+        DatePicker dateFrom = new DatePicker();
+        DatePicker dateTo = new DatePicker();
         string number;
 
-        public Volunteer(string number, string name, ComboBox group)
+        public Volunteer(string number, string name, ComboBox group, DatePicker dateFrom, DatePicker dateTo)
         {
             InitializeComponent();
             studBlock.Text = name;
             groupBox = group;
             this.number = number;
-            student.connectVolunteer(studHoursGrid, number);
+            this.dateFrom = dateFrom;
+            this.dateTo = dateTo;
+
+            student.connectVolunteer(studHoursGrid, number, dateFrom, dateTo);
         }
 
         private void name_GotFocus(object sender, RoutedEventArgs e)
@@ -63,7 +68,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
             if (name.Text != "Волонтёрская работа" && person.Text != "Ответственный" && hours.Text != "")
             {
                 student.insertVolunteer(number, name, date, person, hours);
-                student.connectVolunteer(studHoursGrid, number);
+                student.connectVolunteer(studHoursGrid, number, dateFrom, dateTo);
             }
             else
                 MessageBox.Show("Введите данные корректно!");
@@ -71,7 +76,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
         private void Button_Back(object sender, RoutedEventArgs e)
         {
-            ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox);
+            ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox, dateFrom, dateTo);
             reportSumHours.Show();
             Close();
         }

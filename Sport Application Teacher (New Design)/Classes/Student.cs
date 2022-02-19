@@ -37,11 +37,14 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectStudList(DataGrid studHours, string studNumber)
+        public void connectStudList(DataGrid studHours, string studNumber, DatePicker dateFrom, DatePicker dateTo)
         {
             try
             {
-                connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] WHERE [СтудНомер] = '{studNumber}'", "Student");
+                connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] " +
+                    $"WHERE [СтудНомер] = '1802001' " +
+                    $"AND [Дата] >= convert(DATETIME, '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102) " +
+                    $"AND [Дата] <= convert(DATETIME, '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102)", "Student");
                 studHours.ItemsSource = dst.Tables["Student"].DefaultView;
             }
             catch (SqlException ex)
@@ -50,11 +53,15 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectVolunteer(DataGrid studHoursGrid, string studNumber) 
+        public void connectVolunteer(DataGrid studHoursGrid, string studNumber, DatePicker dateFrom, DatePicker dateTo) 
         {
             try
             {
-                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [Volunteer] WHERE [СтудНомер] = '{studNumber}'", "Volunteer");
+                // connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [Volunteer] WHERE [СтудНомер] = '{studNumber}'", "Volunteer");
+                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [Volunteer] " +
+                    $"WHERE [СтудНомер] = '{studNumber}' " +
+                    $"AND [Дата] >= convert(DATETIME, '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102) " +
+                    $"AND [Дата] <= convert(DATETIME, '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102)", "Volunteer");
                 studHoursGrid.ItemsSource = dst.Tables["Volunteer"].DefaultView;
             }
             catch (SqlException ex)
@@ -78,11 +85,14 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectSections(DataGrid studHoursGrid, string studNumber)
+        public void connectSections(DataGrid studHoursGrid, string studNumber, DatePicker dateFrom, DatePicker dateTo)
         {
             try
             {
-                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [SportSections] WHERE [СтудНомер] = '{studNumber}'", "SportSections");
+                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] " +
+                    $"FROM [SportSections] WHERE [СтудНомер] = '{studNumber}' " +
+                    $"AND [Дата] >= convert(DATETIME, '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102) " +
+                    $"AND [Дата] <= convert(DATETIME, '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102)", "SportSections");
                 studHoursGrid.ItemsSource = dst.Tables["SportSections"].DefaultView;
             }
             catch (SqlException ex)
@@ -106,11 +116,14 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectEvents(DataGrid studHoursGrid, string studNumber)
+        public void connectEvents(DataGrid studHoursGrid, string studNumber, DatePicker dateFrom, DatePicker dateTo)
         {
             try
             {
-                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [Events] WHERE [СтудНомер] = '{studNumber}'", "Events");
+                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [Events] " +
+                    $"WHERE [СтудНомер] = '{studNumber}' " +
+                    $"AND [Дата] >= convert(DATETIME, '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102) " +
+                    $"AND [Дата] <= convert(DATETIME, '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102)", "Events");
                 studHoursGrid.ItemsSource = dst.Tables["Events"].DefaultView;
             }
             catch (SqlException ex)

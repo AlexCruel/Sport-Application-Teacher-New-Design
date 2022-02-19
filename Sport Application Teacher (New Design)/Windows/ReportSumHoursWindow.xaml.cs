@@ -51,8 +51,6 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             this.dateFrom = dateFrom;
             this.dateTo = dateTo;
             teacher.connectGroupHours(group, studHoursGrid, dateFrom, dateTo);
-
-            
         }
 
         public ReportSumHoursWindow(ComboBox group)
@@ -70,7 +68,8 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                ReportStudHoursWindow reportStudHours = new ReportStudHoursWindow(studNumber, studName, groupBox);
+                ReportStudHoursWindow reportStudHours = new 
+                    ReportStudHoursWindow(studNumber, studName, groupBox, dateFrom, dateTo);
                 reportStudHours.Show();
                 Close();
             }
@@ -85,7 +84,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                Volunteer volunteer = new Volunteer(studNumber, studName, groupBox);
+                Volunteer volunteer = new Volunteer(studNumber, studName, groupBox, dateFrom, dateTo);
                 volunteer.Show();
                 Close();
             }
@@ -100,7 +99,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                SportSections sections = new SportSections(studNumber, studName, groupBox);
+                SportSections sections = new SportSections(studNumber, studName, groupBox, dateFrom, dateTo);
                 sections.Show();
                 Close();
             }
@@ -115,7 +114,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                SportEvents events = new SportEvents(studNumber, studName, groupBox);
+                SportEvents events = new SportEvents(studNumber, studName, groupBox, dateFrom, dateTo);
                 events.Show();
                 Close();
             }
@@ -130,7 +129,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                PhysicalFitness fitness = new PhysicalFitness(studNumber, studName, groupBox);
+                PhysicalFitness fitness = new PhysicalFitness(studNumber, studName, groupBox, dateFrom, dateTo);
                 fitness.Show();
                 Close();
             }
