@@ -103,13 +103,15 @@ namespace Sport_Application_Teacher__New_Design_
             }
         }
 
-        public Dictionary<string, int> getStat(ComboBox studBox)
+        public Dictionary<string, int> getStat(ComboBox studBox, DatePicker dateFrom, DatePicker dateTo)
         {
             Dictionary<string, int> dict = new Dictionary<string, int>();
 
             try
             {
-                connect($"EXEC [SumHoursFull] '{studBox.SelectedValue}'", "studStat");
+                connect($"EXEC [SumHoursFull] @СтудНомер = '{studBox.SelectedValue}', " +
+                    $"@ДатаОт = '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', " +
+                    $"@ДатаДо = '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}'", "studStat");
 
                 for (int i = 0; i < dst.Tables["studStat"].Rows.Count; i++)
                     dict.Add((string)dst.Tables["studStat"].Rows[i][0], (int)dst.Tables["studStat"].Rows[i][1]);

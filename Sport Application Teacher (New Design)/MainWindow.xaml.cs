@@ -30,7 +30,7 @@ namespace Sport_Application_Teacher__New_Design_
             App.Current.Properties["frame"] = frame;
             App.Current.Properties["nameText"] = nameText;
             App.Current.Properties["nameNumber"] = nameNumber;
-            frame.Content = new AuthPage(MenuBar, ButtonAccount);
+            frame.Content = new AuthPage(MenuBar, ButtonAccount, dateFrom, dateTo);
         }
 
         private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
@@ -65,7 +65,7 @@ namespace Sport_Application_Teacher__New_Design_
 
         private void Analysis_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            frame.Content = new AnalysisPage();
+            frame.Content = new AnalysisPage(dateFrom, dateTo);
         }
 
         private void GitHub_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -75,7 +75,7 @@ namespace Sport_Application_Teacher__New_Design_
 
         private void Statistics_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            frame.Content = new StatisticsPage();
+            frame.Content = new StatisticsPage(dateFrom, dateTo);
         }
 
         private void Shutdown_MouseDoubleClick(object sender, MouseButtonEventArgs e)

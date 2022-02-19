@@ -27,6 +27,8 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     {
         Frame frame = new Frame();
         TextBlock nameNumber = new TextBlock();
+        DatePicker dateFrom = new DatePicker();
+        DatePicker dateTo = new DatePicker();
 
         Notifier notifier = new Notifier(cfg =>
         {
@@ -49,6 +51,18 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             frame = (Frame)App.Current.Properties["frame"];
             nameNumber = (TextBlock)App.Current.Properties["nameNumber"];
             Faculty faculty = new Faculty(facultyBox);
+            faculty.connectFaculty();
+        }
+
+        public AnalysisPage(DatePicker dateFrom, DatePicker dateTo)
+        {
+            InitializeComponent();
+            frame = (Frame)App.Current.Properties["frame"];
+            nameNumber = (TextBlock)App.Current.Properties["nameNumber"];
+            Faculty faculty = new Faculty(facultyBox);
+            this.dateFrom = dateFrom;
+            this.dateTo = dateTo;
+
             faculty.connectFaculty();
         }
 
@@ -78,7 +92,6 @@ namespace Sport_Application_Teacher__New_Design_.Pages
         {
             if (groupBox.Text != "" && dateFrom.Text != "" && dateTo.Text != "")
             {
-                // frame.Content = new ReportSumHours(groupBox);
                 ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox, dateFrom, dateTo);
                 reportSumHours.Show();
             }

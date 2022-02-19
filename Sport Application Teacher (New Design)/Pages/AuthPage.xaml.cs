@@ -31,6 +31,8 @@ namespace Sport_Application_Teacher__New_Design_
         TextBlock nameNumber = new TextBlock();
         Grid MenuBar = new Grid();
         Button btnAccount = new Button();
+        DatePicker dateFrom = new DatePicker();
+        DatePicker dateTo = new DatePicker();
 
         Notifier notifier = new Notifier(cfg =>
         {
@@ -47,7 +49,7 @@ namespace Sport_Application_Teacher__New_Design_
             cfg.Dispatcher = Application.Current.Dispatcher;
         });
 
-        public AuthPage(Grid menu, Button btnAccount)
+        public AuthPage(Grid menu, Button btnAccount, DatePicker dateFrom, DatePicker dateTo)
         {
             InitializeComponent();
             frame = (Frame)App.Current.Properties["frame"];
@@ -55,6 +57,9 @@ namespace Sport_Application_Teacher__New_Design_
             nameNumber = (TextBlock)App.Current.Properties["nameNumber"];
             MenuBar = menu;
             this.btnAccount = btnAccount;
+            this.dateFrom = dateFrom;
+            this.dateTo = dateTo;
+
             teacher.connectTeacher(loginBox);
         }
 
@@ -72,6 +77,8 @@ namespace Sport_Application_Teacher__New_Design_
                     nameNumber.Text = teacher.Dst.Tables["Teacher"].Rows[index][0].ToString();
                     frame.Content = new HomePage();
                     MenuBar.IsEnabled = true;
+                    dateFrom.IsEnabled = true;
+                    dateTo.IsEnabled = true;
 
                     if (loginBox.Text == "Админ1")
                         btnAccount.IsEnabled = true;

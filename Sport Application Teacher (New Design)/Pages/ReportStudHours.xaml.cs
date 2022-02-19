@@ -30,7 +30,6 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             frame = (Frame)App.Current.Properties["frame"];
             groupBox = group;
             nameStudBlock.Content = name;
-            // teacher.connectStud(studHoursGrid, name);
         }
 
         private void ButtonBack(object sender, RoutedEventArgs e)

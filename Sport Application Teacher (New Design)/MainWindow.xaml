@@ -42,8 +42,8 @@
             <BeginStoryboard Storyboard="{StaticResource MTest}"/>
         </EventTrigger>-->
     </Window.Triggers>
-    
-   
+
+
 
     <Grid Background="LightGray">
 
@@ -119,8 +119,11 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        
+
+        <DatePicker x:Name="dateFrom" IsEnabled="False" Foreground="Black" HorizontalAlignment="Left" Margin="982,85,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="14"/>
+        <DatePicker x:Name="dateTo" IsEnabled="False" Foreground="Black" HorizontalAlignment="Left" Margin="982,124,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="14"/>
+
         <Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
-        
+
     </Grid>
 </Window>
