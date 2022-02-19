@@ -96,10 +96,15 @@ namespace Sport_Application_Teacher__New_Design_.Classes
 
             try
             {
-                connect($"SELECT [Объект], [Группа], SUM([ОтрабЧасы]) FROM [ListJournal] WHERE [Группа] = '{groupBox.Text}' GROUP BY [Объект], [Группа]", "statistics");
+                // connect($"SELECT [Объект], [Группа], SUM([ОтрабЧасы]) FROM [ListJournal] WHERE [Группа] = '{groupBox.Text}' GROUP BY [Объект], [Группа]", "Statistics");
+                connect($"SELECT [Объект], [Группа], SUM([ОтрабЧасы]) FROM [ListJournal] " +
+                    $"WHERE [Группа] = '{groupBox.Text}' " +
+                    $"AND [Дата] >= convert(DATETIME, '04.03.2020', 102) " +
+                    $"AND [Дата] <= convert(DATETIME, '06.03.2020', 102)" +
+                    $"GROUP BY [Объект], [Группа]", "Statistics");
 
                 for (int i = 0; i < dst.Tables["statistics"].Rows.Count; i++) 
-                    dict.Add((string)dst.Tables["statistics"].Rows[i][0], (int)dst.Tables["statistics"].Rows[i][2]);
+                    dict.Add((string)dst.Tables["statistics"].Rows[i][0], (int)dst.Tables["Statistics"].Rows[i][2]);
             }
             catch (SqlException ex)
             {
