@@ -99,7 +99,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                SportSections sections = new SportSections(studNumber, studName, groupBox);
+                SportSections sections = new SportSections(studNumber, studName, groupBox, dateFrom, dateTo);
                 sections.Show();
                 Close();
             }

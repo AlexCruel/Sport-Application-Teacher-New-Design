@@ -85,11 +85,15 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public void connectSections(DataGrid studHoursGrid, string studNumber)
+        public void connectSections(DataGrid studHoursGrid, string studNumber, DatePicker dateFrom, DatePicker dateTo)
         {
             try
             {
-                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [SportSections] WHERE [СтудНомер] = '{studNumber}'", "SportSections");
+                // connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [SportSections] WHERE [СтудНомер] = '{studNumber}'", "SportSections");
+                connect($"SELECT [Название], [Дата], [Ответственный], [Часы] " +
+                    $"FROM [SportSections] WHERE [СтудНомер] = '{studNumber}' " +
+                    $"AND [Дата] >= convert(DATETIME, '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102) " +
+                    $"AND [Дата] <= convert(DATETIME, '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102)", "SportSections");
                 studHoursGrid.ItemsSource = dst.Tables["SportSections"].DefaultView;
             }
             catch (SqlException ex)
