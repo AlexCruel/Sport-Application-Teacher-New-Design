@@ -120,7 +120,6 @@ namespace Sport_Application_Teacher__New_Design_.Classes
         {
             try
             {
-                // connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [Events] WHERE [СтудНомер] = '{studNumber}'", "Events");
                 connect($"SELECT [Название], [Дата], [Ответственный], [Часы] FROM [Events] " +
                     $"WHERE [СтудНомер] = '{studNumber}' " +
                     $"AND [Дата] >= convert(DATETIME, '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102) " +

@@ -129,7 +129,7 @@ namespace Sport_Application_Teacher__New_Design_.Pages
                 notifier.ShowWarning("Выберите студента!");
             else
             {
-                PhysicalFitness fitness = new PhysicalFitness(studNumber, studName, groupBox);
+                PhysicalFitness fitness = new PhysicalFitness(studNumber, studName, groupBox, dateFrom, dateTo);
                 fitness.Show();
                 Close();
             }

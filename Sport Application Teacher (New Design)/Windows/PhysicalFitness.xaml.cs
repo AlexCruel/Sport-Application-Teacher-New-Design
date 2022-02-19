@@ -23,14 +23,19 @@ namespace Sport_Application_Teacher__New_Design_.Admin
     {
         Student student = new Student();
         ComboBox groupBox = new ComboBox();
+        DatePicker dateFrom = new DatePicker();
+        DatePicker dateTo = new DatePicker();
         string number;
 
-        public PhysicalFitness(string number, string name, ComboBox group)
+        public PhysicalFitness(string number, string name, ComboBox group, DatePicker dateFrom, DatePicker dateTo)
         {
             InitializeComponent();
             studBlock.Text = name;
             groupBox = group;
             this.number = number;
+            this.dateFrom = dateFrom;
+            this.dateTo = dateTo;
+
             student.connectFitness(studHoursGrid, number);
         }
 
@@ -71,7 +76,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
         private void Button_Back(object sender, RoutedEventArgs e)
         {
-            ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox);
+            ReportSumHoursWindow reportSumHours = new ReportSumHoursWindow(groupBox, dateFrom, dateTo);
             reportSumHours.Show();
             Close();
         }
