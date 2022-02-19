@@ -16,6 +16,10 @@ using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Wpf;
 using Sport_Application_Teacher__New_Design_.Classes;
+using ToastNotifications;
+using ToastNotifications.Lifetime;
+using ToastNotifications.Messages;
+using ToastNotifications.Position;
 
 namespace Sport_Application_Teacher__New_Design_.Pages
 {
@@ -26,15 +30,37 @@ namespace Sport_Application_Teacher__New_Design_.Pages
     {
         Frame frame = new Frame();
         TextBlock nameNumber = new TextBlock();
+        DatePicker dateFrom = new DatePicker();
+        DatePicker dateTo = new DatePicker();
         Func<ChartPoint, string> label = chartpoint => string.Format("{0} ({1:P", chartpoint.Y, chartpoint.Participation);
 
-        public StatisticsPage()
+        Notifier notifier = new Notifier(cfg =>
+        {
+            cfg.PositionProvider = new WindowPositionProvider(
+                parentWindow: Application.Current.MainWindow,
+                corner: Corner.TopRight,
+                offsetX: 10,
+                offsetY: 10);
+
+            cfg.LifetimeSupervisor = new TimeAndCountBasedLifetimeSupervisor(
+                notificationLifetime: TimeSpan.FromSeconds(3),
+                maximumNotificationCount: MaximumNotificationCount.FromCount(5));
+
+            cfg.Dispatcher = Application.Current.Dispatcher;
+        });
+
+        public StatisticsPage(DatePicker dateFrom, DatePicker dateTo)
         {
             InitializeComponent();
             frame = (Frame)App.Current.Properties["frame"];
             nameNumber = (TextBlock)App.Current.Properties["nameNumber"];
+
+            this.dateFrom = dateFrom;
+            this.dateTo = dateTo;
+
             Group group = new Group(groupBox);
             group.connectGroupStat(nameNumber);
+
             pieChartGroup.LegendLocation = LegendLocation.Bottom;
             pieChartStudent.LegendLocation = LegendLocation.Bottom;
         }
@@ -50,12 +76,17 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             SeriesCollection series = new SeriesCollection();
             Group group = new Group(groupBox);
 
-            Dictionary<string, int> dict = group.getStat(groupBox);
-            ICollection<string> keys = dict.Keys;
+            if (dateFrom.Text != "" && dateTo.Text != "")
+            {
+                Dictionary<string, int> dict = group.getStat(groupBox, dateFrom, dateTo);
+                ICollection<string> keys = dict.Keys;
 
-            foreach (string item in keys)
-                series.Add(new PieSeries() { Title = item, Values = new ChartValues<int> { dict[item] } });
-            pieChartGroup.Series = series;
+                foreach (string item in keys)
+                    series.Add(new PieSeries() { Title = item, Values = new ChartValues<int> { dict[item] } });
+                pieChartGroup.Series = series;
+            }
+            else
+                notifier.ShowWarning("Укажите диапазон дат");
         }
 
         private void ButtonStudStat(object sender, RoutedEventArgs e)
@@ -63,12 +94,17 @@ namespace Sport_Application_Teacher__New_Design_.Pages
             SeriesCollection series = new SeriesCollection();
             Teacher teacher = new Teacher();
 
-            Dictionary<string, int> dict = teacher.getStat(studBox);
-            ICollection<string> keys = dict.Keys;
+            if (dateFrom.Text != "" && dateTo.Text != "")
+            {
+                Dictionary<string, int> dict = teacher.getStat(studBox, dateFrom, dateTo);
+                ICollection<string> keys = dict.Keys;
 
-            foreach (string item in keys)
-                series.Add(new PieSeries() { Title = item, Values = new ChartValues<int> { dict[item] } });
-            pieChartStudent.Series = series;
+                foreach (string item in keys)
+                    series.Add(new PieSeries() { Title = item, Values = new ChartValues<int> { dict[item] } });
+                pieChartStudent.Series = series;
+            }
+            else
+                notifier.ShowWarning("Укажите диапазон дат");
         }
     }
 }

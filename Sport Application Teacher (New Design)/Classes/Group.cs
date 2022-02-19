@@ -90,7 +90,7 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             }
         }
 
-        public Dictionary<string, int> getStat(ComboBox groupBox) 
+        public Dictionary<string, int> getStat(ComboBox groupBox, DatePicker dateFrom, DatePicker dateTo) 
         {
             Dictionary<string, int> dict = new Dictionary<string, int>();
 
@@ -99,8 +99,8 @@ namespace Sport_Application_Teacher__New_Design_.Classes
                 // connect($"SELECT [Объект], [Группа], SUM([ОтрабЧасы]) FROM [ListJournal] WHERE [Группа] = '{groupBox.Text}' GROUP BY [Объект], [Группа]", "Statistics");
                 connect($"SELECT [Объект], [Группа], SUM([ОтрабЧасы]) FROM [ListJournal] " +
                     $"WHERE [Группа] = '{groupBox.Text}' " +
-                    $"AND [Дата] >= convert(DATETIME, '04.03.2020', 102) " +
-                    $"AND [Дата] <= convert(DATETIME, '06.03.2020', 102)" +
+                    $"AND [Дата] >= convert(DATETIME, '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102) " +
+                    $"AND [Дата] <= convert(DATETIME, '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102)" +
                     $"GROUP BY [Объект], [Группа]", "Statistics");
 
                 for (int i = 0; i < dst.Tables["statistics"].Rows.Count; i++) 
