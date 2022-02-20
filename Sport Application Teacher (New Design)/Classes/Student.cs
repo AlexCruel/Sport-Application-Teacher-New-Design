@@ -42,7 +42,7 @@ namespace Sport_Application_Teacher__New_Design_.Classes
             try
             {
                 connect($"SELECT [Дата], [Объект], [УСР] AS 'Учебная программа', [ОтрабЧасы] AS 'Отработано часов' FROM [ListJournal] " +
-                    $"WHERE [СтудНомер] = '1802001' " +
+                    $"WHERE [СтудНомер] = '{studNumber}' " +
                     $"AND [Дата] >= convert(DATETIME, '{dateFrom.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102) " +
                     $"AND [Дата] <= convert(DATETIME, '{dateTo.SelectedDate.Value.ToString("yyyy-MM-dd 00:00:00")}', 102)", "Student");
                 studHours.ItemsSource = dst.Tables["Student"].DefaultView;
