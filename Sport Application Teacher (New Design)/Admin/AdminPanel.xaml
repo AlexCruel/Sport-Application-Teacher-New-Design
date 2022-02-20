@@ -19,9 +19,9 @@
         <Button x:Name="btnFaculty" Content="Добавить факультет" HorizontalAlignment="Left" Margin="259,53,0,0" VerticalAlignment="Top" Width="219" Click="btnFaculty_Click" Grid.ColumnSpan="3" Grid.Column="2"/>
         <Button x:Name="btnSpecialty" Content="Добавить специальность" HorizontalAlignment="Left" Margin="259,106,0,0" VerticalAlignment="Top" Width="219" Click="btnSpecialty_Click" Grid.ColumnSpan="3" Grid.Column="2"/>
         <Button x:Name="btnGroup" Content="Создать группу" HorizontalAlignment="Left" Margin="259,164,0,0" VerticalAlignment="Top" Width="219" Click="btnGroup_Click" Grid.ColumnSpan="3" Grid.Column="2"/>
-        <Button x:Name="btnStudent" Content="Сменить группу" HorizontalAlignment="Left" Margin="259,220,0,0" VerticalAlignment="Top" Width="219" Click="btnStudent_Click" Grid.ColumnSpan="3" Grid.Column="2"/>
-        <Button x:Name="btnTeacher" Content="Добавить преподавателя" HorizontalAlignment="Left" Margin="259,271,0,0" VerticalAlignment="Top" Width="219" Click="btnTeacher_Click" Grid.ColumnSpan="3" Grid.Column="2"/>
-        <Button x:Name="btnAddStudent" Content="Загрузить студентов" HorizontalAlignment="Left" Margin="259,356,0,0" VerticalAlignment="Top" Width="219" Click="btnAddStudent_Click" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <Button x:Name="btnStudent" IsEnabled="False" Content="Сменить группу" HorizontalAlignment="Left" Margin="259,220,0,0" VerticalAlignment="Top" Width="219" Click="btnStudent_Click" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <Button x:Name="btnTeacher" IsEnabled="False" Content="Добавить преподавателя" HorizontalAlignment="Left" Margin="259,271,0,0" VerticalAlignment="Top" Width="219" Click="btnTeacher_Click" Grid.ColumnSpan="3" Grid.Column="2"/>
+        <Button x:Name="btnAddStudent" IsEnabled="False" Content="Загрузить студентов" HorizontalAlignment="Left" Margin="259,356,0,0" VerticalAlignment="Top" Width="219" Click="btnAddStudent_Click" Grid.ColumnSpan="3" Grid.Column="2"/>
 
     </Grid>
 </Window>

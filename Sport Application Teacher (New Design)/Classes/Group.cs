@@ -79,7 +79,8 @@ namespace Sport_Application_Teacher__New_Design_.Classes
         {
             try
             {
-                connect($"SELECT * FROM [Группы] WHERE [НомерПрепод] = '{nameNumber.Text}'", "groupStat");
+                // connect($"SELECT * FROM [Группы] WHERE [НомерПрепод] = '{nameNumber.Text}'", "groupStat");
+                connect($"SELECT * FROM [Группы]", "groupStat");
                 groupBox.ItemsSource = dst.Tables["groupStat"].DefaultView;
                 groupBox.SelectedValuePath = dst.Tables["groupStat"].Columns[0].ToString();
                 groupBox.DisplayMemberPath = dst.Tables["groupStat"].Columns[2].ToString();
