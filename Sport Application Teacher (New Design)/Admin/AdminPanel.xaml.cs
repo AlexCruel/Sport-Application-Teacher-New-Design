@@ -56,7 +56,7 @@ namespace Sport_Application_Teacher__New_Design_.Admin
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Close();
+            Application.Current.Shutdown();
         }
     }
 }
